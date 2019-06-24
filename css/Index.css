@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.id-cards{
+    justify-content: space-between;
+    width: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+}
+.idCard{
+    background-color: lightgrey;
+    border: 1px solid black ;
+    margin-bottom: 5%;
+    width: 45%;
+    height: auto;
+    border-radius: 10px;
+}
+.idCard:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 5px 10px 2px #C7C7C7;
+
+}
+.tabs{
+    flex-direction: row;
+}
+.tab{
+    font-size:1.23rem; 
+    justify-content: space-between;
+    margin-right: 5%;
+}
