@@ -4,9 +4,6 @@
   flex-direction: column;
   align-items: center;
 }
-h5 {
-  margin: 0px;
-}
 body {
   background-image: linear-gradient(to bottom left, #ec7171, #830808);
   color: white;
@@ -14,12 +11,62 @@ body {
 title {
   display: none;
 }
+header {
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+header h1 {
+  font-size: 3rem;
+}
+@media (max-width: 600px) {
+  header h1 {
+    flex-grow: inherit;
+  }
+}
+header img {
+  width: 200px;
+  height: auto;
+}
+@media (max-width: 600px) {
+  header img {
+    display: none;
+  }
+}
+.tabs {
+  font-size: 1.5rem;
+  color: black;
+  width: 100%;
+}
+.tabs .tabWrapper {
+  width: 90%;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 2% 23px;
+}
+@media (max-width: 600px) {
+  .tabs .tabWrapper {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .tabs {
+    font-size: 1.1rem;
+    width: 100%;
+    margin: 0px;
+  }
+}
 .id-cards {
   justify-content: space-between;
   width: 90%;
   flex-direction: row;
   flex-wrap: wrap;
   color: black;
+}
+@media (max-width: 600px) {
+  .id-cards {
+    flex-direction: column;
+  }
 }
 .id-card {
   background-image: linear-gradient(to right, #ecb9b9, #ce4646);
@@ -30,6 +77,11 @@ title {
   border-radius: 10px;
   flex-direction: row;
 }
+@media (max-width: 600px) {
+  .id-card {
+    width: 100%;
+  }
+}
 .id-card .img-container {
   order: -99;
 }
@@ -38,26 +90,4 @@ title {
 }
 .id-card:hover {
   transform: scale(1.1);
-}
-header {
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-header img {
-  width: 20%;
-  height: 20%;
-}
-header h1 {
-  font-size: 3.5rem;
-}
-nav {
-  flex-direction: row;
-}
-nav a {
-  text-decoration: none;
-}
-.tabs {
-  width: 100%;
-  color: black;
 }

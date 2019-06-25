@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>DevDesk Queue | Lambda Student Support</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/CSS/index.css" rel="stylesheet" />
+    <!-- <link href="w3data.js" /> -->
+    <script>
+      function includeHTML() {
+        var z, i, elmnt, file, xhttp
+        /* Loop through a collection of all HTML elements: */
+        z = document.getElementsByTagName('*')
+        for (i = 0; i < z.length; i++) {
+          elmnt = z[i]
+          /*search for elements with a certain atrribute:*/
+          file = elmnt.getAttribute('w3-include-html')
+          if (file) {
+            /* Make an HTTP request using the attribute value as the file name: */
+            xhttp = new XMLHttpRequest()
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4) {
+                if (this.status == 200) {
+                  elmnt.innerHTML = this.responseText
+                }
+                if (this.status == 404) {
+                  elmnt.innerHTML = 'Page not found.'
+                }
+                /* Remove the attribute, and call this function once more: */
+                elmnt.removeAttribute('w3-include-html')
+                includeHTML()
+              }
+            }
+            xhttp.open('GET', file, true)
+            xhttp.send()
+            /* Exit the function: */
+            return
+          }
+        }
+      }
+    </script>
+
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!--NAVBAR-->
+    <div w3-include-HTML="/components/Navbar/navbar.html"></div>
+
+    <!--CONTAINER-->
+    <div class="container">
+
+      <!--HEADER-->
+      <div w3-include-HTML="/components/Header/Header.html"></div>
+
+      <!--ABOUT-->
+      <div w3-include-HTML="/components/About/about.html"></div>
+
+      <!--TEAM-->
+      <section class="team-section">
+        <div w3-include-HTML="/components/Team/Team.html"></div>
+      </section>
+
+      <!--ENDORSEMENTS-->
+      <section class="endorsements-section">
+        <h2>What people are saying about us</h2>
+        <div class="carousel"></div>
+      </section>
+      <!--CONTACT-->
+      <section class="contact-section">
+        <div class="contact-content">
+          <h4>Questions? Comments? Get in touch!</h4>
+          <form action="submit">
+            <input />
+            <label for="name">NAME</label>
+            <input />
+            <label for="email">EMAIL</label>
+            <input />
+            <label for="comment">COMMENT</label>
+          </form>
+          <div class="btn">
+            <button>SUBMIT</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- container -->
+
+    <!--FOOTER-->
+    <footer class="footer">
+      <img src="/assests/footer-assets/copyright.png" alt="copyright" />
+      <p>Copyright 2019</p>
+      <p>CONNECT WITH US</p>
+      <img src="/assests/footer-assets/iconmonstr-twitter-5.svg" alt="">
+      <img src="/assests/footer-assets/iconmonstr-facebook-5.svg" alt="">
+      <img src="/assests/footer-assets/iconmonstr-github-5.svg" alt="">
+    </footer>
+
+    <script>
+      includeHTML()
+    </script>
+  </body>
+</html>
