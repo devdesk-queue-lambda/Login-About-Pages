@@ -777,11 +777,15 @@ nav ul li a {
 footer {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: row;
+  background: #281195;
+  color: white;
+  padding-left: 3%;
+  height: 73px;
 }
 footer .footer-copyright {
-  background-color: black;
+  background: #281195;
 }
 footer .footer-content {
   display: flex;
@@ -791,4 +795,18 @@ footer .footer-content {
 }
 footer .footer-content p {
   padding-bottom: 0px;
+}
+footer .footer-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 45%;
+}
+footer .footer-img p {
+  padding-bottom: 0px;
+}
+footer .footer-img img {
+  background-color: 281195;
+  border-radius: 50%;
+  filter: invert(100%);
 }
