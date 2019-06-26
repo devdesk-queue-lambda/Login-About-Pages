@@ -6,16 +6,16 @@
 
   .header-left-content {
     width: 40%;
-    padding: 20px 0px;
+    padding: 2rem 0rem;
 
     .header-logo {
-      width: 400px;
-      padding: 0px 10px;
+      width: 40rem;
+      padding: 0rem 1rem;
     }
 
     h2 {
       .font(3rem, 3rem);
-      padding: 2rem 0px;
+      padding: 2rem 0rem;
     }
     p {
       .font(1.7rem, 2.5rem);
@@ -26,10 +26,9 @@
     width: 40%;
     .displayFlex(center, center);
     flex-direction: column;
-    padding: 3rem 0px;
+    padding: 3rem 0rem;
 
     .header-illustration {
-      // width: 450px;
       padding: 2rem 0px;
     }
     .header-login {
@@ -37,11 +36,11 @@
 
       h5 {
         .font(2rem, 2rem);
-        padding: 20px;
+        padding: 2rem;
       }
       button {
         padding: 1rem 20%;
-        border-radius: 10px;
+        border-radius: 1rem;
         background-color: @lambda-red;
         .font(2rem, 2rem);
         color: white;
@@ -50,3 +49,63 @@
   }
 }
 
+@media(max-width: 800px) {
+  .header-container {
+    .displayFlex(space-around, center);
+    padding-bottom: 2rem;
+
+    .header-left-content {
+      width: 65%;
+      padding: 0rem 0rem 0rem 3rem;
+
+      .header-logo {
+        padding: 0rem 1rem;
+      }
+      h2 {
+        .font(2rem, 2rem);
+        padding: 2rem 0rem;
+      }
+      p {
+        .font(1.6rem, 2rem);
+      }
+    }
+
+    .header-right-content {
+      width: 30%;
+      height: 40%;
+      .header-illustration {
+        display: none;
+      }
+      .header-login {
+        h5 {
+          .font(1.8rem, 2rem);
+          padding: 0rem 0rem 2rem 0rem;
+        }
+        button {
+          padding: 1.5rem 3rem;
+          font-size: 1.6em;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 500px) {
+  .header-container {
+    flex-direction: column;
+    padding-bottom: 1rem;
+
+    .header-left-content {
+      width: 100%;
+      padding: 0rem 1.5rem;
+      text-align: center;
+      .header-logo {
+        padding: 1rem 1rem;
+      }
+    }
+
+    .header-right-content {
+      width: 100%;
+    }
+  }
+}
