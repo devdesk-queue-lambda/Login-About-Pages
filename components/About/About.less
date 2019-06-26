@@ -1,5 +1,5 @@
 .about-section {
-  // clip-path: polygon(80% 0, 100% 0, 100% 100%, 50% 100%);
+  position: relative;
   background-image: linear-gradient(to bottom,
   @lambda-blue, rgba(0, 0, 0, 0)),
   url("/assests/about-assets/LAMBDA_058.jpeg");
@@ -7,14 +7,16 @@
   background-position: right;
   background-color: @lambda-blue;
   height: 80rem;
+
   .about-text-content {
     .font(1.8em, 2em);
-
     h2 {
-      .font(4rem, 1em);
+      .font(3rem, 1rem);
       color: white;
-      padding: 3rem 5rem;
-      width: 60rem;
+      padding: 4rem 0;
+      margin: 0rem 5rem;
+      width: 20rem;
+      z-index: 99;
     }
     .about-inner-container {
       .displayFlex(space-around, center);
@@ -22,11 +24,15 @@
 
       .helper-container {
         position: relative;
-        padding: 2rem 3.5rem;
-        margin-left: 3rem;
-        width: 20em;
+        right: -2rem;
+        width: 25em;
         height: 17em;
+        padding: 2rem 3.5rem;
+        margin: 1rem 3rem;
         background-color: rgba(255, 255, 255, 0.8);
+        z-index: 3;
+        transition: transform .3s;
+
         img {
           position: relative;
           top: -3rem;
@@ -37,26 +43,35 @@
           position: relative;
           top: -2rem;
           h5 {
-            top: -2rem;
-            left: 3rem;
             font-weight: 700;
-            font-size: 1.3em;
+            font-size: 1.4em;
           }
           ul {
-            padding-top: 1rem;
-            .font(1em, 1.8em);
+            .font(1em, 1em);
+
+            li {
+              padding-top: 1rem;
+            }
           }
         }
       }
+      .helper-container:hover {
+        transform: scale(1.05) translateY(-1.5rem);
+        backdrop-filter: blur(4rem);
+        z-index: 20;
+        box-shadow: 1rem 1rem 0rem 0rem rgba(@lambda-red, .7);
+      }
       .student-container {
         position: relative;
-        top: -10rem;
-        left: -1rem;
-        padding: 1rem 2rem;
-        margin-right: 4rem;
+        top: -6rem;
+        left: -2rem;
         width: 30em;
         height: 12em;
+        padding: 1rem 2rem;
+        margin-right: 4rem;
         background-color: rgba(255,255,255, .8);
+        z-index: 3;
+        transition: transform .3s;
 
         img {
           position: relative;
@@ -70,53 +85,60 @@
           top: -8rem;
           margin: 2rem;
           h5 {
-            .font(1.4em, 1.4em);
+            font-size: 1.2em;
             font-weight: 700;
           }
           ul {
             text-align: right;
-            padding-top: 1rem;
-            .font(1em, 1.8em);
+            padding-top: 2rem;
+            .font(1em, 1em);
+
+            li {
+              padding-top: 1rem;
+            }
           }
         }
       }
+      .student-container:hover {
+        transform: scale(1.05) translateY(-1.5rem);
+        backdrop-filter: blur(4rem);
+        z-index: 20;
+        box-shadow: 1rem 1rem 0rem 0rem rgba(@lambda-red, .7);
+      }
     }
-
   }
   .app-screenshot img {
     position: relative;
-    top: 5em;
+    top: 4em;
     left: 10em;
     width: 45rem;
     border: 3px solid @lambda-grey;
     background-color: lightgray;
     box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    transition: transform .3s;
   }
-  .about-bg-img {
-    position: relative;
-    // display: none;
-    background-position: center;
-    width: 100%;
-    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  clip-path: polygon(80% 0, 100% 0, 100% 100%, 50% 100%);
-  background-image: linear-gradient(to bottom, rgba(20,20,255,.5),
-  rgba(255, 255, 255, 0));
+  .app-screenshot img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 1rem .5rem rgba(0,0,0, .2);
+  }
+  .about-bg-polygon-blue {
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    width: 60%;
+    height: 800px;
+    z-index: 0;
+    clip-path: polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
+    background-image: linear-gradient(to bottom,
+      @lambda-blue, rgb(255, 255, 255));
   }
 
 }
-// .about-section::after {
-//   content: '';
-//   clip-path: polygon(80% 0, 100% 0, 100% 100%, 50% 100%);
-//   background-image: linear-gradient(to bottom,
-//   rgba(86, 247, 239, 0.966), rgba(26, 148, 142, 0.075));
-
-//   height: 80rem;
-//   z-index: 4;
-// }
 
 @media (max-width: 800px) {
   .about-section {
-    background-size: 35rem;
+    background-image: none;
     .about-text-content {
       .font(1.4em, 1.6em);
       h2 {
@@ -129,77 +151,167 @@
         padding: 1rem 1.5rem;
         margin-left: 2rem;
         width: 25em;
-        // right: -1rem;
-        // height: 17em;
+        right: -3rem;
 
         img {
-          top: -2rem;
-          width: 3rem;
-
+          top: 0rem;
+          left: 13rem;
+          width: 4rem;
+          height: auto;
+          z-index: 2;
         }
         .helper-text {
-          top: -2rem;
-          // margin: 0rem;
+          top: -1rem;
           h5 {
-            // top: -2rem;
-            // left: 3rem;
-            // font-weight: 700;
+            margin-left: 1rem;
+            margin-top: 1rem;
             font-size: 1.2em;
+            text-align: center;
           }
           ul {
-            // padding-top: 1rem;
-            // .font(1em, 1.8em);
+            text-align: center;
+            vertical-align: middle;
+            li {
+              font-size: 1.2em;
+            }
           }
         }
       }
       .student-container {
-        top: -8rem;
-        padding: 2.2rem 1rem;
-        margin-right: 1.2rem;
-        // width: 30em;
-        height: 15em;
-        // background-color: rgba(255,255,255, .8);
+        top: -4rem;
+        margin-right: 1.3rem;
+        width: 30rem;
+        height: 23rem;
 
         img {
-          // position: relative;
-          top: -2rem;
-          right: -23rem;
+          top: 0rem;
+          right: -10rem;
           width: 4rem;
         }
         .student-text {
-          // position: relative;
-          top: -7rem;
-          margin: 1rem;
+          top: 0rem;
+          margin: 0rem;
           h5 {
-            // .font(1.4em, 1.4em);
+            text-align: center;
             font-size: 1.2em;
-            // font-weight: 700;
           }
           ul {
-            // text-align: right;
-            padding-top: 1rem;
-            // .font(1em, 1.8em);
+            text-align: center;
+            vertical-align: middle;
+            padding: 0;
+            li {
+              font-size: 1.1em;
+            }
           }
         }
       }
     }
+    }
+    .app-screenshot img {
+      left: 4em;
+      width: 40rem;
+    }
+    .about-bg-polygon-blue {
+      position: absolute;
+      top: 0%;
+      left: 30%;
+      width: 65%;
+      height: 800px;
+      z-index: 0;
+      clip-path: polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
+      background-image: linear-gradient(to bottom,
+        @lambda-blue, rgb(255, 255, 255));
+    }
+  }
+}
 
-  }
-  .app-screenshot img {
-    // position: relative;
-    // top: 5em;
-    left: 4em;
-    width: 35rem;
-    // border: 3px solid @lambda-grey;
-    // background-color: lightgray;
-    // box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.3);
-  }
-  .about-bg-img {
-    // border: 1px solid red;
-    // position: relative;
-    // display: none;
-    // right: 0%;
-    // width: 100%;
-  }
+
+@media (max-width: 500px) {
+  .about-section {
+    background-image: none;
+    height: auto;
+    vertical-align: middle;
+    .about-text-content {
+      .font(1em, 1.4em);
+      text-align: center;
+      h2 {
+        font-size: 3em;
+        padding: 3rem;
+        width: auto;
+      }
+      .about-inner-container {
+        .displayFlex(center,center);
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        .helper-container {
+          padding: 1rem 0rem;
+          margin: 1rem;
+          width: 30em;
+          height: 20em;
+          right: 0rem;
+          height: 25rem;
+
+          img {
+            top: 0rem;
+            left: 1rem;
+            width: 3rem;
+          }
+          .helper-text {
+            top: 0rem;
+            h5 {
+              top: 0rem;
+              font-size: 2em;
+            }
+            ul {
+              padding-top: 1rem;
+              .font(1.4em, 1.4em);
+            }
+          }
+        }
+      .student-container {
+        top: 0rem;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 1rem 0rem;
+        margin: 1rem;
+        width: 30em;
+        height: 21em;
+
+        img {
+          top: 0rem;
+          right: 0rem;
+          width: 3rem;
+        }
+        .student-text {
+          top: -1rem;
+          margin: 1rem;
+          h5 {
+            font-size: 2em;
+          }
+          ul {
+            text-align: center;
+            padding-top: 1rem;
+            .font(1.4em, 1.4em);
+          }
+        }
+      }
+      }
+    }
+    .app-screenshot img {
+      position: relative;
+      text-align: center;
+      vertical-align: middle;
+      top: 0em;
+      bottom: 2em;
+      left: 0em;
+      right: 0em;
+      width: 40rem;
+      margin: 4rem;
+    }
+    .about-bg-polygon-blue {
+      display: none;
+    }
   }
 }
