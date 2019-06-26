@@ -774,3 +774,21 @@ nav ul li a {
 .id-card:hover {
   transform: scale(1.1);
 }
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+footer .footer-copyright {
+  background-color: black;
+}
+footer .footer-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+footer .footer-content p {
+  padding-bottom: 0px;
+}
