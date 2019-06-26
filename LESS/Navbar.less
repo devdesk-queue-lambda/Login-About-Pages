@@ -1,37 +1,78 @@
-nav {
-  .displayFlex(space-between, center);
-  flex-wrap: wrap;
-  background-color: rgb(19,18,30);
-  ul {
-    .displayFlex(space-between, flex-start);
-    width: 75%;
-    margin-right: 1rem;
-    li a {
-      .font(1.4rem,1.4rem);
-      margin-right: 1.5rem;
-      text-decoration: none;
+
+.navbar {
+  display: flex; 
+  justify-content: space-between;  
+  background-color: @lambda-light-blue;
+  padding: 35px; 
+  align-items: center;
+    
+  img {
+    height: 10%; 
+    width: 15%;
+    @media @mobile {
+      width: 100%; 
+    }
+    }
+
+  a {
+      padding: 6.5px; 
+      text-decoration: none; 
+      font-size: 1.8rem; 
       color: white;
-    }
-  }
+      
+}
+      a:hover {
+          color: @lambda-red; 
+          cursor: pointer; 
+
+      }
 }
 
-@media(max-width: 800px) {
-  nav {
-    flex-direction: column;
-    ul {
-      width: 80%;
-      height: 5rem;
-      .displayFlex(center, flex-start);
-      flex-wrap: wrap;
-    }
-  }
+.a-tags {
+  display: flex; 
+  justify-content: space-evenly;
+  width: 60%; 
 }
 
-@media(max-width: 500px) {
-  nav {
-    ul {
-      width: 90%;
-      height: 9rem;
+@media @tablet{
+  .navbar {
+    display: flex; 
+    margin: 0 auto; 
+    width: 100%; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 25px; 
+    
+    .lambda-logo{
+      height: 28px; 
     }
-  }
+     a {
+        font-size: 1.3rem
+      }
+    
+    }
 }
+
+@media @mobile {
+  .navbar {
+    display: flex; 
+    width: 100%; 
+    flex-direction: column;  
+    font-size: 10px; 
+
+     
+    .a-tags {
+        display: flex; 
+        flex-direction: column; 
+        
+        
+      }
+        a {
+          font-size: 3rem; 
+          display: flex; 
+          justify-content: center; 
+        }
+      }
+  }
+
+  
