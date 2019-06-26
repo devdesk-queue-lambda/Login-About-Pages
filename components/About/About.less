@@ -1,0 +1,205 @@
+.about-section {
+  // clip-path: polygon(80% 0, 100% 0, 100% 100%, 50% 100%);
+  background-image: linear-gradient(to bottom,
+  @lambda-blue, rgba(0, 0, 0, 0)),
+  url("/assests/about-assets/LAMBDA_058.jpeg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: @lambda-blue;
+  height: 80rem;
+  .about-text-content {
+    .font(1.8em, 2em);
+
+    h2 {
+      .font(4rem, 1em);
+      color: white;
+      padding: 3rem 5rem;
+      width: 60rem;
+    }
+    .about-inner-container {
+      .displayFlex(space-around, center);
+      .font(1em, 1.8em);
+
+      .helper-container {
+        position: relative;
+        padding: 2rem 3.5rem;
+        margin-left: 3rem;
+        width: 20em;
+        height: 17em;
+        background-color: rgba(255, 255, 255, 0.8);
+        img {
+          position: relative;
+          top: -3rem;
+          width: 6rem;
+          filter: invert(34%) sepia(5%) saturate(1862%) hue-rotate(193deg) brightness(97%) contrast(88%);
+        }
+        .helper-text {
+          position: relative;
+          top: -2rem;
+          h5 {
+            top: -2rem;
+            left: 3rem;
+            font-weight: 700;
+            font-size: 1.3em;
+          }
+          ul {
+            padding-top: 1rem;
+            .font(1em, 1.8em);
+          }
+        }
+      }
+      .student-container {
+        position: relative;
+        top: -10rem;
+        left: -1rem;
+        padding: 1rem 2rem;
+        margin-right: 4rem;
+        width: 30em;
+        height: 12em;
+        background-color: rgba(255,255,255, .8);
+
+        img {
+          position: relative;
+          top: -2rem;
+          right: -35rem;
+          width: 6rem;
+          filter: invert(34%) sepia(5%) saturate(1862%) hue-rotate(193deg) brightness(97%) contrast(88%);
+        }
+        .student-text {
+          position: relative;
+          top: -8rem;
+          margin: 2rem;
+          h5 {
+            .font(1.4em, 1.4em);
+            font-weight: 700;
+          }
+          ul {
+            text-align: right;
+            padding-top: 1rem;
+            .font(1em, 1.8em);
+          }
+        }
+      }
+    }
+
+  }
+  .app-screenshot img {
+    position: relative;
+    top: 5em;
+    left: 10em;
+    width: 45rem;
+    border: 3px solid @lambda-grey;
+    background-color: lightgray;
+    box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.3);
+  }
+  .about-bg-img {
+    position: relative;
+    // display: none;
+    background-position: center;
+    width: 100%;
+    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(80% 0, 100% 0, 100% 100%, 50% 100%);
+  background-image: linear-gradient(to bottom, rgba(20,20,255,.5),
+  rgba(255, 255, 255, 0));
+  }
+
+}
+// .about-section::after {
+//   content: '';
+//   clip-path: polygon(80% 0, 100% 0, 100% 100%, 50% 100%);
+//   background-image: linear-gradient(to bottom,
+//   rgba(86, 247, 239, 0.966), rgba(26, 148, 142, 0.075));
+
+//   height: 80rem;
+//   z-index: 4;
+// }
+
+@media (max-width: 800px) {
+  .about-section {
+    background-size: 35rem;
+    .about-text-content {
+      .font(1.4em, 1.6em);
+      h2 {
+        font-size: 2em;
+        padding-left: 1rem;
+      }
+    .about-inner-container {
+
+      .helper-container {
+        padding: 1rem 1.5rem;
+        margin-left: 2rem;
+        width: 25em;
+        // right: -1rem;
+        // height: 17em;
+
+        img {
+          top: -2rem;
+          width: 3rem;
+
+        }
+        .helper-text {
+          top: -2rem;
+          // margin: 0rem;
+          h5 {
+            // top: -2rem;
+            // left: 3rem;
+            // font-weight: 700;
+            font-size: 1.2em;
+          }
+          ul {
+            // padding-top: 1rem;
+            // .font(1em, 1.8em);
+          }
+        }
+      }
+      .student-container {
+        top: -8rem;
+        padding: 2.2rem 1rem;
+        margin-right: 1.2rem;
+        // width: 30em;
+        height: 15em;
+        // background-color: rgba(255,255,255, .8);
+
+        img {
+          // position: relative;
+          top: -2rem;
+          right: -23rem;
+          width: 4rem;
+        }
+        .student-text {
+          // position: relative;
+          top: -7rem;
+          margin: 1rem;
+          h5 {
+            // .font(1.4em, 1.4em);
+            font-size: 1.2em;
+            // font-weight: 700;
+          }
+          ul {
+            // text-align: right;
+            padding-top: 1rem;
+            // .font(1em, 1.8em);
+          }
+        }
+      }
+    }
+
+  }
+  .app-screenshot img {
+    // position: relative;
+    // top: 5em;
+    left: 4em;
+    width: 35rem;
+    // border: 3px solid @lambda-grey;
+    // background-color: lightgray;
+    // box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.3);
+  }
+  .about-bg-img {
+    // border: 1px solid red;
+    // position: relative;
+    // display: none;
+    // right: 0%;
+    // width: 100%;
+  }
+  }
+}
