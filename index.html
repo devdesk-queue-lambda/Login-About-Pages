@@ -143,6 +143,18 @@
                     
                 
                     </div>
+                    <div class = 'id-card' data-tab="ui">
+                            <div class = 'id-card-content'>
+                                <h4>Kristin Barr</h4>
+                                <h5>UI Team</h5>
+                                <p>I’m a fullstack web developer with an interest in web design and the JAM stack. I’m also a podcast and meetup junkie, enjoy biking, photography, and sewing my own brand of cycling gear. I love learning and meeting new people. Ask me about what I’m working on!</p>
+                            </div>
+                            <div class = 'img-container'>
+                                <img src="./assests/team-assets/kristin.PNG" alt="kristin-barr">
+                            </div>
+                    
+                            </div>       
+
                     <div class = 'id-card' data-tab="front-end">
                         <div class = 'id-card-content'>
                             <h4>Dustin Hamano</h4>
@@ -177,7 +189,8 @@
                         </div>
                     
 
-                    </div>        
+                    </div>
+            
                     <div class = 'id-card' data-tab="back-end">
                         <div class = 'id-card-content'>
                             <h4>Jonathan Erlich</h4>
@@ -187,21 +200,7 @@
                         <div class = 'img-container'>
                             <img src="#" alt="#">
                         </div>
-                    
-                
-
                     </div>       
-                    <div class = 'id-card' data-tab="ui">
-                        <div class = 'id-card-content'>
-                            <h4>Kristin Barr</h4>
-                            <h5>UI Team</h5>
-                            <p>I’m a fullstack web developer with an interest in web design and the JAM stack. I’m also a podcast and meetup junkie, enjoy biking, photography, and sewing my own brand of cycling gear. I love learning and meeting new people. Ask me about what I’m working on!</p>
-                        </div>
-                        <div class = 'img-container'>
-                            <img src="./assests/team-assets/kristin.PNG" alt="kristin-barr">
-                        </div>
-                
-                        </div>       
                     </div>
                 </section>
     </section>
@@ -214,17 +213,19 @@
             <!--CONTACT-->
             <section class="contact-section">
                 <div class="contact-content">
-                    <h4>Questions? Comments? Get in touch!</h4>
-                    <form action="submit">
-                        <input />
-                        <label for="name">NAME</label>
-                        <input />
-                        <label for="email">EMAIL</label>
-                        <input />
-                        <label for="comment">COMMENT</label>
-                    </form>
-                    <div class="btn">
-                        <button>SUBMIT</button>
+                    <h4>Questions? <br> Comments? <br> Get in touch!</h4>
+                    <div class="contact-form">
+                        <form action = "review">
+                            <label for="name">FULL NAME</label>
+                            <input type = 'text' id = 'full-name'   name="fullname" placeholder='Full name..'>
+
+                            <label for="email">EMAIL</label>
+                            <input type="text" id = 'email' name ='email' placeholder="example@email.com"/>
+
+                            <label for="comment">COMMENT</label>
+                            <input type = 'text'id = 'comment' name = 'comment' placeholder="This was so helpful!"/>
+                            <input type = 'submit' value = 'SUBMIT'>
+              
                     </div>
                 </div>
             </section>
