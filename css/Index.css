@@ -693,7 +693,6 @@ nav ul li a {
   }
 }
 .tabs {
-  font-size: 1.5rem;
   color: black;
   width: 100%;
 }
@@ -709,6 +708,13 @@ nav ul li a {
     width: 100%;
   }
 }
+.tabs .tabWrapper .tab {
+  font-size: 2.23rem;
+  flex-direction: row;
+  margin: 2% 23px;
+  color: black;
+  cursor: pointer;
+}
 @media (max-width: 500px) {
   .tabs {
     font-size: 1rem;
@@ -717,11 +723,11 @@ nav ul li a {
   }
 }
 .id-cards {
-  justify-content: space-between;
-  width: 90%;
-  flex-direction: row;
-  flex-wrap: wrap;
+  width: 100%;
   color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 @media (max-width: 500px) {
   .id-cards {
@@ -729,13 +735,27 @@ nav ul li a {
   }
 }
 .id-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   background-image: linear-gradient(to right, #ecb9b9, #ce4646);
-  border: 1px solid black ;
+  border: 1px solid #c92929;
   margin-bottom: 5%;
   width: 45%;
   height: 250px;
   border-radius: 10px;
-  flex-direction: row;
+}
+.id-card .id-card-content {
+  padding-right: 4%;
+}
+.id-card h4 {
+  display: flex;
+  justify-content: center;
+}
+.id-card h5 {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
 }
 @media (max-width: 500px) {
   .id-card {
@@ -744,17 +764,13 @@ nav ul li a {
 }
 .id-card .img-container {
   order: -99;
+  width: 100%;
+  padding: 2%;
+  height: auto;
 }
 .id-card .img-container img {
   border-radius: 50%;
 }
 .id-card:hover {
   transform: scale(1.1);
-}
-.tab {
-  font-size: 1.23rem;
-  flex-direction: row;
-  margin: 2% 23px;
-  color: black;
-  cursor: pointer;
 }
