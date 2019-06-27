@@ -56,7 +56,7 @@
                     <div class="header-bg-polygon-blue"></div>
                     <div class="header-bg-polygon-light-blue"></div>
                 </div>
-                </header>
+            </header>
             
             <!--ABOUT-->
             <section id = 'about-link' class="about-section">
@@ -144,6 +144,18 @@
                     
                 
                     </div>
+                    <div class = 'id-card' data-tab="ui">
+                            <div class = 'id-card-content'>
+                                <h4>Kristin Barr</h4>
+                                <h5>UI Team</h5>
+                                <p>I’m a fullstack web developer with an interest in web design and the JAM stack. I’m also a podcast and meetup junkie, enjoy biking, photography, and sewing my own brand of cycling gear. I love learning and meeting new people. Ask me about what I’m working on!</p>
+                            </div>
+                            <div class = 'img-container'>
+                                <img src="./assests/team-assets/kristin.PNG" alt="kristin-barr">
+                            </div>
+                    
+                            </div>       
+
                     <div class = 'id-card' data-tab="front-end">
                         <div class = 'id-card-content'>
                             <h4>Dustin Hamano</h4>
@@ -178,7 +190,8 @@
                         </div>
                     
 
-                    </div>        
+                    </div>
+            
                     <div class = 'id-card' data-tab="back-end">
                         <div class = 'id-card-content'>
                             <h4>Jonathan Erlich</h4>
@@ -188,19 +201,7 @@
                         <div class = 'img-container'>
                             <img src="#" alt="#">
                         </div>
-
                     </div>       
-                    <div class = 'id-card' data-tab="ui">
-                        <div class = 'id-card-content'>
-                            <h4>Kristin Barr</h4>
-                            <h5>UI Team</h5>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos odio corporis expedita a eum omnis pariatur sint aliquid ullam. Ipsam assumenda nulla eaque. Quos iure quibusdam molestiae et adipisci. Dolorem.</p>
-                        </div>
-                        <div class = 'img-container'>
-                            <img src="#" alt="#">
-                        </div>
-                
-                        </div>       
                     </div>
                 </section>
     </section>
@@ -222,27 +223,32 @@
             <!--CONTACT-->
             <section id = 'contact-page' class="contact-section">
                 <div class="contact-content">
-                    <h4>Questions? Comments? Get in touch!</h4>
-                    <form action="submit">
-                        <input />
-                        <label for="name">NAME</label>
-                        <input />
-                        <label for="email">EMAIL</label>
-                        <input />
-                        <label for="comment">COMMENT</label>
-                    </form>
-                    <div class="btn">
-                        <button>SUBMIT</button>
+                    <h4>Questions? <br> Comments? <br> Get in touch!</h4>
+                    <div class="contact-form">
+                        <form action = "review">
+                            <label for="name">FULL NAME</label>
+                            <input type = 'text' id = 'full-name'   name="fullname" placeholder='Full name..'>
+
+                            <label for="email">EMAIL</label>
+                            <input type="text" id = 'email' name ='email' placeholder="example@email.com"/>
+
+                            <label for="comment">COMMENT</label>
+                            <input type = 'text'id = 'comment' name = 'comment' placeholder="This was so helpful!"/>
+                            <input type = 'submit' value = 'SUBMIT'>
+              
                     </div>
                 </div>
             </section>
         </div>
         <!-- container -->
-
-        <!--FOOTER-->
-        <footer class="footer">
-            <img src="./assests/footer-assets/copyright.png" alt="copyright" />
+    </body>
+     <!--FOOTER-->
+     <footer>
+        <div class = 'footer-content'>
+            <img class = 'footer-copyright' src="./assests/footer-assets/copyright.png" alt="copyright" />
             <p>Copyright 2019</p>
+        </div>
+        <div class = 'footer-img'>
             <p>CONNECT WITH US</p>
             <img src="./assests/footer-assets/iconmonstr-twitter-5.svg" alt="" />
             <img
@@ -253,6 +259,4 @@
         </footer>
         <script src="./js/Team.js"></script>
         <script src="./js/Endorsements.js"></script>
-
-    </body>
 </html>
