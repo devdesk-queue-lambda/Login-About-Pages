@@ -7,7 +7,7 @@
   background-position: right;
   background-size: auto 100%;
   background-color: @lambda-blue;
-  height: 80rem;
+  max-height: 80rem;
 
   .about-text-content {
     .font(1.8em, 2em);
@@ -27,8 +27,8 @@
         position: relative;
         right: -2rem;
         width: 25em;
-        height: 17em;
-        padding: 2rem 3.5rem;
+        height: 15em;
+        padding: 0rem 3.5rem;
         margin: 1rem 3rem;
         background-color: rgba(255, 255, 255, 0.8);
         z-index: 3;
@@ -108,16 +108,18 @@
       }
     }
   }
-  .app-screenshot img {
-    position: relative;
-    top: 3em;
-    left: 10em;
-    width: 45rem;
-    border: 3px solid @lambda-grey;
-    background-color: lightgray;
-    box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.3);
-    z-index: 2;
-    transition: transform .3s;
+  .app-screenshot {
+    padding: 3.5rem 0rem;
+    width: 45%;
+    margin: auto 7rem;
+    img {
+      position: relative;
+      border: 3px solid @lambda-grey;
+      background-color: lightgray;
+      box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.3);
+      z-index: 5;
+      transition: transform .3s;
+    }
   }
   .app-screenshot img:hover {
     transform: scale(1.02);
@@ -128,7 +130,7 @@
     top: 0%;
     left: 5%;
     width: 80%;
-    height: 800px;
+    height: 100%;
     z-index: 0;
     clip-path: polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
     background-image: linear-gradient(to bottom,
@@ -140,6 +142,7 @@
 @media (max-width: 800px) {
   .about-section {
     background-image: none;
+    max-height: 70rem;
     .about-text-content {
       .font(1.4em, 1.6em);
       h2 {
@@ -150,8 +153,9 @@
 
       .helper-container {
         padding: 1rem 1.5rem;
-        margin-left: 2rem;
+        margin: 0 2rem;
         width: 25em;
+        height: 23rem;
         right: -3rem;
 
         img {
@@ -166,7 +170,7 @@
           h5 {
             margin-left: 1rem;
             margin-top: 1rem;
-            font-size: 1.2em;
+            font-size: 1.1em;
             text-align: center;
           }
           ul {
@@ -182,7 +186,7 @@
         top: -4rem;
         margin-right: 1.3rem;
         width: 30rem;
-        height: 23rem;
+        height: 22rem;
 
         img {
           top: 0rem;
@@ -208,30 +212,23 @@
       }
     }
     }
-    .app-screenshot img {
-      left: 15%;
-      width: 60%;
+    .app-screenshot {
+      padding: 2rem 0rem;
+      margin: auto 12rem;
+      width: 50%;
     }
+
     .about-bg-polygon-blue {
-      position: absolute;
-      top: 0%;
       left: 30%;
       width: 65%;
-      height: 800px;
-      z-index: 0;
-      clip-path: polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
-      background-image: linear-gradient(to bottom,
-        @lambda-blue, rgb(255, 255, 255));
     }
   }
 }
 
-
 @media (max-width: 500px) {
   .about-section {
     background-image: none;
-    height: auto;
-    vertical-align: middle;
+    max-height: 90rem;
     .about-text-content {
       .font(1em, 1.4em);
       text-align: center;
@@ -306,11 +303,9 @@
       }
       }
     }
-    .app-screenshot img {
-      left: 20%;
-      top: 10%;
-      width: 60%;
-      margin: 2rem 0;
+    .app-screenshot {
+      width: 70%;
+      margin: auto;
     }
     .about-bg-polygon-blue {
       display: none;
