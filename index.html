@@ -13,42 +13,55 @@
     </head>
 
     <body>
-        <section class = 'wholepage-container'>
-            <!--NAVBAR-->
-            <nav class= "navbar">
-                    <img class = 'l-logo' src="/assests/Lambda_Logo.png" alt="Lambda logo">
-                <div class = 'a-tags'>
-                    <a href="">About</a>
-                    <a href="">Meet Our Team</a>
-                    <a href="">Endorsements</a>
-                    <a href="">Quick Links</a>
-                    <a href="">Login</a>
-                </div>
-            </nav>
 
-            <!--CONTAINER-->
-            <div class="container">
-                <!--HEADER-->
-                <header>
-                    <div class="header-container">
-                        <img class="header-logo" src="./assests/header-assets/Logo.png" alt="DevDesk Queue logo"/>
-                        <h2>We're here to help!</h2>
-                        <p>DevDesk Queue is an online ticketing system that serves Lambda students that need help during the course. It gives helpers a way to administer assistance to those students easily and provides a visual way to track their current task.</p>
+        <!--CONTAINER-->
+        <div class="container">
+            <!--NAVBAR-->
+                <div class ='nav-container'>
+                        <nav class= "navbar">
+                                <img class = 'l-logo' src="/assests/Lambda_Logo.png" alt="Lambda logo">
+                            <div class = 'a-tags'>
+                                <a href="#about-link">About</a>
+                                <a href="#meet-team-sect">Meet Our Team</a>
+                                <a href="">Endorsements</a>
+                                <a href="#contact-page">Contact</a>
+                                <a href="https://inspiring-swanson-272e62.netlify.com">Login</a>
+                            </div>
+                        </nav>
+                    </div>
+            <!--HEADER-->
+            <header>
+                <div class="header-container">
+                    <div class="header-left-content">
+                      <img class="header-logo" src="./assests/header-assets/Logo.png" alt="DevDesk Queue logo" />
+                      <h2>We're here to help!</h2>
+                      <p>
+                          DevDesk Queue is an online ticketing system that serves Lambda students that need help during the course. It gives helpers a way to administer assistance to those students easily and provides a visual way to track
+                          their current tasks.
+                      </p>
+
                     </div>
                     <div class="header-right-content">
-                        <img class="header-illustration" src="./assests/header-assets/undraw_code_typing_7jnv.svg" alt="code typing"/>
-                        <div class="header-login">
-                            <h5>Student or Helper?</h5>
-                            <button>Login Here!</button>
-                        </div>
+
+
+                      <img class="header-illustration"
+                      src="./assests/header-assets/undraw_code_typing_7jnv.svg"
+                      alt="code typing"
+                      />
+                      <div class="header-login">
+                          <h5>Student or Helper?</h5>
+                          <button onclick ="location.href = 'https://inspiring-swanson-272e62.netlify.com'">Login Here!</button>
+                      </div>
                     </div>
-                </header>
-                
+                </div>
+            </header>
+
+
             <!--ABOUT-->
-            <section class="about-section">
+            <section id = 'about-link' class="about-section">
                 <div class="about-text-content">
                     <h2 class="how-it-works">How It Works</h2>
-            
+
                     <div class="about-inner-container">
                         <div class="helper-container">
                             <img
@@ -66,7 +79,7 @@
                                 </ul>
                             </div>
                         </div>
-            
+
                         <div class="student-container">
                             <img
                                 src="./assests/about-assets/iconmonstr-help-6.svg"
@@ -84,19 +97,20 @@
                         </div>
                     </div>
                 </div>
-            
+
                 <div class="app-screenshot">
                     <img
                         src="./assests/about-assets/app-screenshot.png"
                         alt="app screenshot"
                     />
                 </div>
-            
+
                 <div class="about-bg-polygon-blue"></div>
             </section>
-            
+
             <!--TEAM-->
-            <section class="team-section">
+
+            <section id = 'meet-team-sect' class="team-section">
                 <div class = 'tabs'>
                     <h1>Meet Our Team</h1>
 
@@ -128,10 +142,11 @@
                         <div class = 'img-container'>
                             <img src="./assests/team-assets/brandon.PNG" alt="brandon-img" style = 'width: 100px'>
                         </div>
-                    
-                
+
+
                     </div>
                     <div class = 'id-card' data-tab="ui">
+
                             <div class = 'id-card-content'>
                                 <h4>Kristin Barr</h4>
                                 <h5>UI Team</h5>
@@ -142,6 +157,7 @@
                             </div>
                     
                     </div>       
+
                     <div class = 'id-card' data-tab="front-end">
                         <div class = 'id-card-content'>
                             <h4>Dustin Hamano</h4>
@@ -152,7 +168,7 @@
                             <img src="./assests/team-assets/dustin.PNG" alt="dustin-img" style = 'width: 100px'>
                     </div>
 
-                    </div>        
+                    </div>
                     <div class = 'id-card' data-tab="ui">
                         <div class = 'id-card-content'>
                             <h4>Christopher Pupo</h4>
@@ -162,9 +178,9 @@
                         <div class = 'img-container'>
                             <img src="./assests/team-assets/chris.PNG" alt="chrispupo">
                         </div>
-                    
 
-                    </div>        
+
+                    </div>
                     <div class = 'id-card' data-tab="team-lead">
                         <div class = 'id-card-content'>
                             <h4>Michael Landers</h4>
@@ -174,8 +190,9 @@
                         <div class = 'img-container'>
                             <img src="./assests/team-assets/mike.PNG" alt="mike">
                         </div>
+
                     </div>
-            
+
                     <div class = 'id-card' data-tab="back-end">
                         <div class = 'id-card-content'>
                             <h4>Jonathan Erlich</h4>
@@ -185,27 +202,29 @@
                         <div class = 'img-container'>
                             <img src="./assests/team-assets/jonathan.PNG" alt="jonathan">
                         </div>
-                    </div>       
                     </div>
+
                 </section>
             </section>
 
+
             <!--ENDORSEMENTS-->
-            <section>
-                    <div>
-                        <h1>What people are saying about us</h1>
-                        <div class="carousel">
-                            <div class="left-button" ><</div>
-                                <p class= 'carousel-quote'>This is the best website ever!</p>
-                                <p class= 'carousel-quote'>I was so far behind and Dev Desk Queue saved my life!</p>
-                                <p class= 'carousel-quote'>If it wasn't for Dev Desk I wouldnt have my job right now!</p>
-                                <p class= 'carousel-quote'>If only Lambda's Dev Desk Queue was available for all of life's problems!</p>
-                            <div class="right-button">></div>
-                            </div>
+            <section class="endorsements-section">
+                <div>
+                    <h1>What people are saying about us</h1>
+                    <div class="carousel">
+                        <div class="left-button" ></div>
+                            <p class= 'carousel-quote'>This is the best website ever!</p>
+                            <p class= 'carousel-quote'>I was so far behind and Dev Desk Queue saved my life!</p>
+                            <p class= 'carousel-quote'>If it wasn't for Dev Desk I wouldnt have my job right now!</p>
+                            <p class= 'carousel-quote'>If only Lambda's Dev Desk Queue was available for all of life's problems!</p>
+                        <div class="right-button">
                         </div>
+
             </section>
+
             <!--CONTACT-->
-            <section class="contact-section">
+            <section id = 'contact-page' class="contact-section">
                 <div class="contact-content">
                     <h4>Questions? <br> Comments? <br> Get in touch!</h4>
                     <div class="contact-form">
@@ -219,12 +238,13 @@
                             <label for="comment">COMMENT</label>
                             <input type = 'text'id = 'comment' name = 'comment' placeholder="This was so helpful!"/>
                             <input type = 'submit' value = 'SUBMIT'>
-              
+
                     </div>
                 </div>
             </section>
             </div>
         <!-- container -->
+
         </body>
         <!--FOOTER-->
         <footer>
@@ -240,6 +260,7 @@
                     alt=""
                 />
                 <img src="./assests/footer-assets/iconmonstr-github-5.svg" alt="" />
+
         </footer>
     </section>
 <script src="./js/Team.js"></script>
