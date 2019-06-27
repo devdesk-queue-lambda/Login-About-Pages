@@ -164,6 +164,9 @@ img {
   height: auto;
 }
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
@@ -230,162 +233,6 @@ img {
     font-size: 3rem;
     display: flex;
     justify-content: center;
-  }
-}
-.header-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-}
-.header-container .header-left-content {
-  width: 40%;
-  padding: 2rem 0rem;
-}
-.header-container .header-left-content .header-logo {
-  width: 35rem;
-  padding: 0 1rem;
-  margin: 1.5rem 0;
-}
-.header-container .header-left-content h2 {
-  font-family: 'Lato', sans-serif;
-  color: #444444;
-  font-size: 3rem;
-  line-height: 3rem;
-  padding: 2rem 0rem;
-}
-.header-container .header-left-content p {
-  font-family: 'Lato', sans-serif;
-  color: #444444;
-  font-size: 1.7rem;
-  line-height: 2.5rem;
-}
-.header-container .header-right-content {
-  width: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 3rem 0rem;
-}
-.header-container .header-right-content .header-illustration {
-  padding: 2rem 0px;
-  transition: transform 0.3s;
-}
-.header-container .header-right-content .header-illustration:hover {
-  transform: scale(1.05) translateY(-1.5rem);
-  backdrop-filter: blur(4rem);
-  z-index: 20;
-}
-.header-container .header-right-content .header-login {
-  align-items: center;
-}
-.header-container .header-right-content .header-login h5 {
-  font-family: 'Lato', sans-serif;
-  color: #444444;
-  font-size: 2rem;
-  line-height: 2rem;
-  padding: 2rem;
-}
-.header-container .header-right-content .header-login button {
-  padding: 1rem 20%;
-  border-radius: 1rem;
-  background-color: #bb1333;
-  font-family: 'Lato', sans-serif;
-  color: #444444;
-  font-size: 2rem;
-  line-height: 2rem;
-  color: white;
-  transition: transform 0.3s;
-}
-.header-container .header-right-content .header-login button:hover {
-  transform: scale(1.05);
-  background-color: #ffffff;
-  color: #55596d;
-}
-.header-container .header-right-content .header-login button:hover ::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
-.header-container .header-bg-polygon-blue {
-  position: absolute;
-  top: 80px;
-  left: 50%;
-  width: 50%;
-  height: 540px;
-  z-index: -1;
-  clip-path: polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
-  background-image: linear-gradient(to top, #1a61b0, rgba(0, 0, 0, 0));
-}
-.header-container .header-bg-polygon-light-blue {
-  position: absolute;
-  top: 80px;
-  left: 20%;
-  width: 80%;
-  height: 520px;
-  z-index: -2;
-  clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
-  background-image: linear-gradient(to bottom, #3ab5e5, rgba(0, 0, 0, 0));
-}
-@media (max-width: 800px) {
-  .header-container .header-left-content {
-    width: 60vw;
-    padding: 0rem 0rem 1rem 3rem;
-  }
-  .header-container .header-left-content .header-logo {
-    width: 80%;
-    padding: 1rem 2rem;
-  }
-  .header-container .header-left-content p {
-    font-family: 'Lato', sans-serif;
-    color: #444444;
-    font-size: 1.6rem;
-    line-height: 2rem;
-    padding-bottom: 2rem;
-  }
-  .header-container .header-right-content {
-    width: 40vw;
-  }
-  .header-container .header-right-content .header-illustration {
-    display: none;
-  }
-  .header-container .header-right-content .header-login h5 {
-    font-family: 'Lato', sans-serif;
-    color: #444444;
-    font-size: 1.8rem;
-    line-height: 2rem;
-    padding: 0rem 0rem 2rem 0rem;
-  }
-  .header-container .header-right-content .header-login button {
-    padding: 1.5rem 3rem;
-    font-size: 1.6em;
-  }
-  .header-bg-polygon-blue {
-    display: none;
-  }
-  .header-bg-polygon-light-blue {
-    top: 120px;
-    left: 50%;
-  }
-}
-@media (max-width: 500px) {
-  .header-container {
-    flex-direction: column;
-    padding-bottom: 1rem;
-  }
-  .header-container .header-left-content {
-    width: 100%;
-    padding: 0rem 1.5rem;
-    text-align: center;
-  }
-  .header-container .header-left-content .header-logo {
-    padding: 1rem 1rem;
-  }
-  .header-container .header-right-content {
-    width: 100%;
-  }
-  .header-bg-polygon-light-blue {
-    display: none;
   }
 }
 .about-section {
@@ -509,7 +356,7 @@ img {
 }
 .about-section .app-screenshot img {
   position: relative;
-  top: 4em;
+  top: 3em;
   left: 10em;
   width: 45rem;
   border: 3px solid #55596d;
@@ -526,7 +373,7 @@ img {
   position: absolute;
   top: 0%;
   left: 10%;
-  width: 60%;
+  width: 50%;
   height: 800px;
   z-index: 0;
   clip-path: polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
@@ -603,8 +450,8 @@ img {
     font-size: 1.1em;
   }
   .about-section .app-screenshot img {
-    left: 4em;
-    width: 40rem;
+    left: 15%;
+    width: 60%;
   }
   .about-section .about-bg-polygon-blue {
     position: absolute;
@@ -646,9 +493,8 @@ img {
     padding: 1rem 0rem;
     margin: 1rem;
     width: 30em;
-    height: 20em;
+    height: 21em;
     right: 0rem;
-    height: 25rem;
   }
   .about-section .about-text-content .about-inner-container .helper-container img {
     top: 0rem;
@@ -661,6 +507,7 @@ img {
   .about-section .about-text-content .about-inner-container .helper-container .helper-text h5 {
     top: 0rem;
     font-size: 2em;
+    margin: 0;
   }
   .about-section .about-text-content .about-inner-container .helper-container .helper-text ul {
     padding-top: 1rem;
@@ -668,6 +515,9 @@ img {
     color: #444444;
     font-size: 1.4em;
     line-height: 1.4em;
+  }
+  .about-section .about-text-content .about-inner-container .helper-container .helper-text ul li {
+    padding-top: 0.5rem;
   }
   .about-section .about-text-content .about-inner-container .student-container {
     top: 0rem;
@@ -677,7 +527,7 @@ img {
     padding: 1rem 0rem;
     margin: 1rem;
     width: 30em;
-    height: 21em;
+    height: 20em;
   }
   .about-section .about-text-content .about-inner-container .student-container img {
     top: 0rem;
@@ -699,16 +549,14 @@ img {
     font-size: 1.4em;
     line-height: 1.4em;
   }
+  .about-section .about-text-content .about-inner-container .student-container .student-text ul li {
+    padding-top: 0.5rem;
+  }
   .about-section .app-screenshot img {
-    position: relative;
-    text-align: center;
-    vertical-align: middle;
-    top: 0em;
-    bottom: 2em;
-    left: 0em;
-    right: 0em;
-    width: 40rem;
-    margin: 4rem;
+    left: 20%;
+    top: 10%;
+    width: 60%;
+    margin: 2rem 0;
   }
   .about-section .about-bg-polygon-blue {
     display: none;
@@ -716,18 +564,26 @@ img {
 }
 .tabs {
   color: black;
-  width: 100%;
+  width: 90%;
+}
+.tabs h1 {
+  display: flex;
+  justify-content: center;
 }
 .tabs .tabWrapper {
   display: flex;
-  width: 90%;
   justify-content: space-between;
+  justify-content: center;
   flex-direction: row;
   margin: 2% 23px;
 }
 @media (max-width: 500px) {
   .tabs .tabWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
+    margin: 0px;
   }
 }
 .tabs .tabWrapper .tab {
@@ -738,6 +594,13 @@ img {
   cursor: pointer;
 }
 @media (max-width: 500px) {
+  .tabs .tabWrapper .tab {
+    font-size: 2.2rem;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 500px) {
   .tabs {
     font-size: 1rem;
     width: 100%;
@@ -745,7 +608,7 @@ img {
   }
 }
 .id-cards {
-  width: 100%;
+  width: 90%;
   color: black;
   display: flex;
   flex-wrap: wrap;
@@ -753,7 +616,8 @@ img {
 }
 @media (max-width: 500px) {
   .id-cards {
-    flex-direction: column;
+    width: 90%;
+    margin-left: 5%;
   }
 }
 .id-card {
@@ -782,6 +646,7 @@ img {
 @media (max-width: 500px) {
   .id-card {
     width: 100%;
+    justify-content: center;
   }
 }
 .id-card .img-container {
@@ -858,13 +723,13 @@ footer {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  background: #281195;
+  background: #14121e;
   color: white;
   padding-left: 3%;
   height: 73px;
 }
 footer .footer-copyright {
-  background: #281195;
+  background: #14121e;
 }
 footer .footer-content {
   display: flex;
