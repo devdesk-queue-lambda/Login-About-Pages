@@ -1,14 +1,26 @@
+
 .tabs{
   color: black;
-  width: 100%;
+  width: 90%;
+  h1{
+    display: flex;
+    justify-content: center;
+  }
+  
   .tabWrapper{
     display:flex;
-    width: 90%;
     justify-content: space-between;
+    justify-content: center;
     flex-direction: row;
     margin: 2% 23px;
+
     @media @mobile{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       width: 100%;
+      margin: 0px;
+      
     }
   .tab{
     font-size:2.23rem; 
@@ -16,6 +28,11 @@
     margin: 2% 23px;
     color: black;
     cursor:pointer;
+    @media @mobile{
+      font-size: 2.2rem;
+      display:flex;
+      justify-content: center;
+    }
     }
   }
   @media @mobile{
@@ -26,13 +43,14 @@
 }
 
 .id-cards{
-  width: 100%;
+  width: 90%;
   color: black;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   @media @mobile {
-    flex-direction: column;
+    width: 90%;
+    margin-left: 5%;
   }
 }
 .id-card{
@@ -60,6 +78,7 @@
   }
   @media @mobile{
       width: 100%;
+      justify-content: center;
   }
   .img-container{
     order: -99;
@@ -74,5 +93,5 @@
 
 .id-card:hover {
   transform: scale(1.1);
-}
 
+}
