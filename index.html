@@ -14,16 +14,18 @@
     </head>
     <body>
         <!--NAVBAR-->
+        <div class ='nav-container'>
         <nav class= "navbar">
                 <img class = 'l-logo' src="/assests/Lambda_Logo.png" alt="Lambda logo">
             <div class = 'a-tags'>
-                <a href="">About</a>
-                <a href="">Meet Our Team</a>
+                <a href="#about-link">About</a>
+                <a href="#meet-team-sect">Meet Our Team</a>
                 <a href="">Endorsements</a>
-                <a href="">Quick Links</a>
-                <a href="">Login</a>
+                <a href="#contact-page">Contact</a>
+                <a href="https://inspiring-swanson-272e62.netlify.com">Login</a>
             </div>
         </nav>
+    </div>
 
         <!--CONTAINER-->
         <div class="container">
@@ -48,7 +50,7 @@
                     />
                     <div class="header-login">
                         <h5>Student or Helper?</h5>
-                        <button>Login Here!</button>
+                        <button onclick ="location.href = 'https://inspiring-swanson-272e62.netlify.com'">Login Here!</button>
                     </div>
                     </div>
                     <div class="header-bg-polygon-blue"></div>
@@ -57,7 +59,7 @@
             </header>
             
             <!--ABOUT-->
-            <section class="about-section">
+            <section id = 'about-link' class="about-section">
                 <div class="about-text-content">
                     <h2 class="how-it-works">How It Works</h2>
             
@@ -108,7 +110,7 @@
             </section>
             
             <!--TEAM-->
-            <section class="team-section">
+            <section id = 'meet-team-sect' class="team-section">
                 <h1>Meet Our Team</h1>
                 <div class = 'tabs'>
                     <div class ='tabWrapper'>
@@ -219,7 +221,7 @@
                         </div>
                 </section>
             <!--CONTACT-->
-            <section class="contact-section">
+            <section id = 'contact-page' class="contact-section">
                 <div class="contact-content">
                     <h4>Questions? <br> Comments? <br> Get in touch!</h4>
                     <div class="contact-form">
