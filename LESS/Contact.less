@@ -1,0 +1,58 @@
+.contact-content{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 5px;
+
+    padding: 10px;
+    background-image: linear-gradient(to top, purple, grey);
+
+    h4{
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 4.5rem;
+        width: 100%;
+        @media @mobile {
+            justify-content: center;
+        }
+    }
+    form{
+        width: 75%;
+        @media @mobile{
+            width: 95%;
+        }
+
+    }
+    
+    input[type = text], select{
+        width: 100%;
+        padding: 12px;
+        margin: 8px;
+        border: 1px solid #ccc; 
+        border-radius: 4px;
+        box-sizing: border-box;
+
+    }
+    input[type=submit]{
+        width: 100%;
+        background-color: blue;
+        color: white;
+        padding: 20px;
+        margin: 8px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type = submit]:hover{
+        background-color: darkblue;
+    }
+    label{
+        font-size: 1.5rem;
+    }
+    @media @mobile{
+        flex-direction: column;
+    }
+
+
+}
