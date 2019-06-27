@@ -168,46 +168,68 @@ img {
   width: 100%;
   margin: 0 auto;
 }
-nav {
+.navbar {
   display: flex;
   justify-content: space-between;
+  background-color: #3ab5e5;
+  padding: 35px;
   align-items: center;
-  flex-wrap: wrap;
-  background-color: #13121e;
 }
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 75%;
-  margin-right: 1rem;
+.navbar img {
+  height: 10%;
+  width: 15%;
 }
-nav ul li a {
-  font-family: 'Lato', sans-serif;
-  color: #444444;
-  font-size: 1.4rem;
-  line-height: 1.4rem;
-  margin-right: 1.5rem;
+@media (max-width: 500px) {
+  .navbar img {
+    width: 100%;
+  }
+}
+.navbar a {
+  padding: 6.5px;
   text-decoration: none;
+  font-size: 1.8rem;
   color: white;
 }
+.navbar a:hover {
+  color: #bb1333;
+  cursor: pointer;
+}
+.a-tags {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+}
 @media (max-width: 800px) {
-  nav {
-    flex-direction: column;
-  }
-  nav ul {
-    width: 80%;
-    height: 5rem;
+  .navbar {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+  }
+  .navbar .lambda-logo {
+    height: 28px;
+  }
+  .navbar a {
+    font-size: 1.3rem;
   }
 }
 @media (max-width: 500px) {
-  nav ul {
-    width: 90%;
-    height: 9rem;
+  .navbar {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-size: 10px;
+  }
+  .navbar .a-tags {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar a {
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
   }
 }
 .header-container {
