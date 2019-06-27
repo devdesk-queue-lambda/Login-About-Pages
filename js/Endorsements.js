@@ -8,24 +8,24 @@ class Carousel {
       // select a Nodelist of the carousel images (from carousel element)
       this.quotes = this.carousel.querySelectorAll('.carousel-quote')
     //   this.quotes.forEach(quote => {
-    //       quote.style.display = 'none'; 
+    //       quote.style.display = 'none';
     //   })
       // we're starting the index at 0. it will increment/decr when pic changes
       this.currentIndex = 0
       // default image set to 0th index in nodelist by making it visible
       this.quotes[this.currentIndex].style.display = 'inline';
-      console.log(this.quotes[this.currentIndex]);
+      // console.log(this.quotes[this.currentIndex]);
       // event listeners set to activate methods in this class
       this.leftButton.addEventListener('click', () => this.previousSlide())
       this.rightButton.addEventListener('click', () => this.nextSlide())
       // example of explicit binding
       // this.leftButton.addEventListener('click', this.previousSlide.bind(this))
-  
+
     //   window.setInterval(()=> {
     //     return this.nextSlide()
     //   }, 5000)
     }
-  
+
     previousSlide() {
       // use current index to change current image styling to be hidden
       this.quotes[this.currentIndex].style.display = 'none'
@@ -40,34 +40,34 @@ class Carousel {
       this.quotes[this.currentIndex].style.display = 'inline'
       // TweenLite.from(this.images[this.currentIndex], 1.5, {
       //   ease: Power4.easeOut, x: -500 })
-  
+
       // future animaion to be configured
     }
-  
+
     nextSlide() {
       const beforeQuote = this.quote[this.currentIndex]
       // console.log('before', beforeImg)
-  
+
       // for this method, increment the current index to go to next node/image
       this.currentIndex += 1
       if (this.currentIndex >= this.quote.length) {
         this.currentIndex = 0
       }
-  
+
       this.quotes[this.currentIndex].style.display = 'inline'
-  
+
       // TweenLite.from(this.images[this.currentIndex], 1, {
       //   ease: Power4.easeOut, opacity: 0, x: 500 })
-  
+
         // console.log('after', beforeImg, this.images[this.currentIndex])
-  
+
         // TweenLite.to(beforeImg, 1, {
         //   ease: Power4.easeOut, opacity: 0, x: -100 })
-  
+
       beforeQuote.style.display = 'none'
     }
   }
-  
+
   // select the whole carousel element so we can add functionality
   let carousel = document.querySelector('.carousel');
   // instantiate the class constructor function and give our 'dumb' component

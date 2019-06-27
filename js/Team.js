@@ -11,7 +11,7 @@ class TabLink {
         }
         this.cards = Array.from(this.cards).map(map => new TabCard(map));
         this.tabElement.addEventListener('click', () => this.selectTab());
-        console.log(this.tabElement);
+        // console.log(this.tabElement);
     }
 
     selectTab() {
@@ -33,5 +33,5 @@ class TabCard {
 }
 
 let tabs = document.querySelectorAll('.tab');
-console.log('SCRIPT RUNNING');
+// console.log('SCRIPT RUNNING');
 tabs.forEach(tab => new TabLink(tab));
