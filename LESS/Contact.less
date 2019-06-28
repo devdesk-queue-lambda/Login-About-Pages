@@ -5,12 +5,12 @@
     border-radius: 5px;
 
     padding: 10px;
-    background-image: linear-gradient(to top, purple, grey);
+    background-image: linear-gradient(to top, @lambda-light-grey, @lambda-black-blue);
 
     h4{
         display: flex;
         align-items: center;
-        color: white;
+        color: @lambda-light-grey;
         font-size: 4.5rem;
         width: 100%;
         @media @mobile {
@@ -19,25 +19,27 @@
     }
     form{
         width: 75%;
+        color: @lambda-light-grey;
         @media @mobile{
             width: 95%;
         }
 
     }
-    
+
     input[type = text], select{
         width: 100%;
         padding: 12px;
         margin: 8px;
-        border: 1px solid #ccc; 
+        border: 1px solid @lambda-grey;
         border-radius: 4px;
         box-sizing: border-box;
+
 
     }
     input[type=submit]{
         width: 100%;
-        background-color: blue;
-        color: white;
+        background-color: @lambda-dark-blue;
+        color: @lambda-light-grey;
         padding: 20px;
         margin: 8px;
         border-radius: 4px;
@@ -45,7 +47,7 @@
     }
 
     input[type = submit]:hover{
-        background-color: darkblue;
+        background-color: @lambda-blue;
     }
     label{
         font-size: 1.5rem;
