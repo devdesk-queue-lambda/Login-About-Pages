@@ -703,57 +703,68 @@ img {
     display: none;
   }
 }
-.tabs {
-  color: black;
-  width: 90%;
+.team-section {
+  background-image: linear-gradient(to bottom right, #f0f4f7, #bb1333);
 }
-.tabs h1 {
+.team-section .tabs {
+  color: #55596d;
+  width: 100%;
+  padding-top: 2rem;
+}
+.team-section .tabs h1 {
+  color: #444444;
   display: flex;
   justify-content: center;
 }
-.tabs .tabWrapper {
+.team-section .tabs .tabWrapper {
   display: flex;
   justify-content: space-between;
   justify-content: center;
   flex-direction: row;
-  margin: 2% 23px;
+  margin: 2% 0;
+  width: 100%;
 }
 @media (max-width: 500px) {
-  .tabs .tabWrapper {
+  .team-section .tabs .tabWrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    margin: 0px;
+    margin: 1rem 0px;
   }
 }
-.tabs .tabWrapper .tab {
-  font-size: 2.23rem;
+.team-section .tabs .tabWrapper .tab {
+  font-size: 1.6rem;
   flex-direction: row;
   margin: 2% 23px;
-  color: black;
+  text-transform: uppercase;
   cursor: pointer;
 }
 @media (max-width: 500px) {
-  .tabs .tabWrapper .tab {
+  .team-section .tabs .tabWrapper .tab {
     font-size: 2.2rem;
     display: flex;
     justify-content: center;
   }
 }
+@media (max-width: 800px) {
+  .team-section .tabs .tabWrapper .tab {
+    font-size: 1.5rem;
+    margin-left: 0;
+  }
+}
 @media (max-width: 500px) {
-  .tabs {
+  .team-section .tabs {
     font-size: 1rem;
     width: 100%;
     margin: 0px;
   }
 }
 .id-cards {
-  width: 90%;
-  color: black;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 @media (max-width: 500px) {
   .id-cards {
@@ -765,15 +776,14 @@ img {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-image: linear-gradient(to right, #ecb9b9, #ce4646);
-  border: 1px solid #c92929;
   margin-bottom: 5%;
   width: 45%;
   height: 250px;
-  border-radius: 10px;
+  background-color: #f0f4f7;
+  box-shadow: 1px 1px 4px 1px rgba(85, 89, 109, 0.5);
 }
 .id-card .id-card-content {
-  padding-right: 4%;
+  padding: 0 4%;
 }
 .id-card h4 {
   display: flex;
@@ -783,6 +793,16 @@ img {
   font-size: 1.5rem;
   display: flex;
   justify-content: center;
+  margin-bottom: 0.8rem;
+  color: #55596d;
+}
+.id-card p {
+  text-align: center;
+}
+@media (max-width: 800px) {
+  .id-card p {
+    line-height: 2rem;
+  }
 }
 @media (max-width: 500px) {
   .id-card {

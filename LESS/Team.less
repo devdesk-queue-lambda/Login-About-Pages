@@ -1,92 +1,119 @@
+.team-section {
+  background-image:linear-gradient(to bottom right,@lambda-light-grey, @lambda-red);
 
-.tabs{
-  color: black;
-  width: 90%;
-  h1{
-    display: flex;
-    justify-content: center;
+  .tabs {
+    color: @lambda-grey;
+    width: 100%;
+    padding-top: 2rem;
+    // border: 1px solid blue;
+
+    h1 {
+      color: #444444;
+      display: flex;
+      justify-content: center;
   }
-  
-  .tabWrapper{
-    display:flex;
+
+  .tabWrapper {
+    display: flex;
     justify-content: space-between;
     justify-content: center;
     flex-direction: row;
-    margin: 2% 23px;
+    margin: 2% 0;
+    width: 100%;
+    // border: 1px solid green;
 
-    @media @mobile{
+    @media @mobile {
       display: flex;
       flex-direction: column;
       justify-content: center;
       width: 100%;
-      margin: 0px;
-      
+      margin: 1rem 0px;
     }
-  .tab{
-    font-size:2.23rem; 
-    flex-direction: row;
-    margin: 2% 23px;
-    color: black;
-    cursor:pointer;
-    @media @mobile{
-      font-size: 2.2rem;
-      display:flex;
-      justify-content: center;
-    }
+
+    .tab {
+      font-size: 1.6rem;
+      flex-direction: row;
+      margin: 2% 23px;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      @media @mobile {
+        font-size: 2.2rem;
+        display: flex;
+        justify-content: center;
+      }
+      @media @tablet {
+        font-size: 1.5rem;
+        margin-left: 0;
+      }
     }
   }
-  @media @mobile{
-      font-size: 1rem;
-      width: 100%;
-      margin: 0px;
+  @media @mobile {
+    font-size: 1rem;
+    width: 100%;
+    margin: 0px;
   }
 }
+}
 
-.id-cards{
-  width: 90%;
-  color: black;
+.id-cards {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  // border: 1px solid green;
 
   @media @mobile {
     width: 90%;
     margin-left: 5%;
   }
 }
-.id-card{
+.id-card {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-image:linear-gradient(to right ,rgb(236, 185, 185), rgb(206, 70, 70));
-  border: 1px solid rgb(201, 41, 41) ;
   margin-bottom: 5%;
   width: 45%;
   height: 250px;
-  .id-card-content{
-    padding-right: 4%;
+  background-color: @lambda-light-grey;
+  box-shadow: 1px 1px 4px 1px rgb(@lambda-grey, .5);
+  // border: 1px solid red;
+
+  .id-card-content {
+    padding: 0 4%;
   }
 
-  border-radius: 10px;
-  h4{
+  h4 {
     display: flex;
     justify-content: center;
   }
-  h5{
+  h5 {
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
+    margin-bottom: .8rem;
+    color: @lambda-grey;
   }
-  @media @mobile{
-      width: 100%;
-      justify-content: center;
+  p {
+    text-align: center;
   }
-  .img-container{
+  @media @tablet {
+    p {
+      line-height: 2rem;
+    }
+
+  }
+
+  @media @mobile {
+    width: 100%;
+    justify-content: center;
+  }
+  .img-container {
     order: -99;
     width: 100%;
     padding: 2%;
     height: auto;
-    img{
+    img {
       border-radius: 50%;
     }
   }
@@ -94,5 +121,4 @@
 
 .id-card:hover {
   transform: scale(1.1);
-
 }
