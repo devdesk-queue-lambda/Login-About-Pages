@@ -751,7 +751,7 @@ img {
   color: black;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 @media (max-width: 500px) {
   .id-cards {
@@ -1025,15 +1025,13 @@ img {
 }
 .contact-content {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  border-radius: 5px;
   padding: 10px;
   background-image: linear-gradient(to top, #f0f4f7, #14121e);
 }
 .contact-content h4 {
   display: flex;
   align-items: center;
+  justify-content: center;
   color: #f0f4f7;
   font-size: 4.5rem;
   width: 100%;
@@ -1045,6 +1043,7 @@ img {
 }
 .contact-content form {
   width: 75%;
+  justify-content: center;
   color: #f0f4f7;
 }
 @media (max-width: 500px) {
@@ -1058,7 +1057,6 @@ img {
   padding: 12px;
   margin: 8px;
   border: 1px solid #55596d;
-  border-radius: 4px;
   box-sizing: border-box;
 }
 .contact-content input[type=submit] {
@@ -1067,7 +1065,6 @@ img {
   color: #f0f4f7;
   padding: 20px;
   margin: 8px;
-  border-radius: 4px;
   cursor: pointer;
 }
 .contact-content input[type=submit]:hover {
@@ -1116,5 +1113,5 @@ footer .footer-img img {
   background-color: 281195;
   border-radius: 50%;
   filter: invert(100%);
-  padding-right: 5%;
+  padding-right: 1%;
 }
