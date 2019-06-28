@@ -837,6 +837,10 @@ img {
   cursor: pointer;
   z-index: 5;
 }
+.endorsements-section .carousel .left-button:active,
+.endorsements-section .carousel .right-button:active {
+  transform: translate(0%, 10%);
+}
 .endorsements-section .carousel .left-button i {
   transform: translate(80%, 10%);
 }
