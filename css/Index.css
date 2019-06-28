@@ -172,6 +172,8 @@ img {
   margin: 0 auto;
 }
 .nav-container {
+  position: sticky;
+  top: 0;
   max-width: 1400px;
   justify-content: center;
 }
