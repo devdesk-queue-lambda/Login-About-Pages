@@ -1,87 +1,80 @@
 .nav-container {
+  position: sticky;
+  top: 0;
   max-width: 1400px;
-  justify-content: center; 
+  justify-content: center;
+  z-index: 99;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: @lambda-light-blue;
+    align-items: center;
+    padding: 22px;
+  }
 
-
-.navbar {
-  display: flex; 
-  justify-content: space-between;  
-  background-color: @lambda-light-blue; 
-  align-items: center;  
-  padding: 22px; 
-   
-}
- 
-  
   img {
-    height: 10%; 
+    height: 10%;
     width: 15%;
     @media @mobile {
-      width: 100%; 
+      width: 100%;
     }
-    }
+  }
 
   a {
-      padding: 6.5px; 
-      text-decoration: none; 
-      font-size: 1.8rem; 
-      color: white;
-      
-}
-      a:hover {
-          color: @lambda-red; 
-          cursor: pointer; 
-      }
+    padding: 6.5px;
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: white;
+  }
+  a:hover {
+    color: @lambda-red;
+    cursor: pointer;
+  }
 }
 .a-tags {
-  display: flex; 
+  display: flex;
   justify-content: space-evenly;
-  width: 60%; 
+  width: 60%;
 }
 
 @media @tablet {
   .navbar {
-    display: flex; 
-    margin: 0 auto; 
-    width: 100%; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 25px; 
-    
-    .lambda-logo{
-      height: 28px; 
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+
+    .lambda-logo {
+      height: 28px;
     }
-     a {
-        font-size: 1.3rem
-      }
-    
+    a {
+      font-size: 1.3rem;
     }
+  }
 }
 
 @media @mobile {
   .navbar {
-    display: flex; 
-    width: 100%; 
-    flex-direction: column;  
-    font-size: 10px; 
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-size: 10px;
+
 
     .l-logo {
       display: none; 
     }
 
-     
     .a-tags {
-        display: flex; 
-        flex-direction: column; 
-        
-        
-      }
-        a {
-          font-size: 3rem; 
-          display: flex; 
-          justify-content: center; 
-        }
-      }
+      display: flex;
+      flex-direction: column;
+    }
+    a {
+      font-size: 3rem;
+      display: flex;
+      justify-content: center;
+    }
   }
-
-  
+}
