@@ -12,9 +12,9 @@ class Carousel {
       // example of explicit binding
       // this.leftButton.addEventListener('click', this.previousSlide.bind(this))
 
-      window.setInterval(()=> {
-        return this.nextSlide()
-      }, 5000)
+      // window.setInterval(()=> {
+      //   return this.nextSlide()
+      // }, 5000)
     }
 
     previousSlide() {

@@ -1,24 +1,20 @@
 .endorsements-section {
   .displayFlex(center, center);
-  .font(1rem, 1rem);
   flex-direction: column;
   height: 50rem;
-  // background:
-  // linear-gradient(to bottom right, transparent 49.8%, @lambda-grey 100%),
-  // linear-gradient(to top right, transparent 49.8%, @lambda-grey 100%);
-
   background-color: #eeeeee;
 
   h1 {
+    .font(4rem, 4rem);
     padding: 4rem 0 0 0;
     margin: 0 3rem;
   }
   .carousel {
-    .displayFlex(center, center);
+    .displayFlex(space-between, center);
     width: 90%;
     height: 90%;
 
-    .left-button {
+    .left-button, .right-button {
       width: 5rem;
       height: 5rem;
       border-radius: 50%;
@@ -27,23 +23,18 @@
       color: @lambda-light-grey;
       box-shadow: 0rem .5rem 1rem 0rem rgba(0, 0, 0, 0.2);
       cursor: pointer;
+      z-index: 5;
+    }
+
+    .left-button {
       i {
         transform: translate(80%, 10%);
-        z-index: 5;
       }
     }
+
     .right-button {
-      width: 5rem;
-      height: 5rem;
-      border-radius: 50%;
-      font-size: 4rem;
-      background-color: @lambda-light-blue;
-      color: @lambda-light-grey;
-      box-shadow: 0rem .5rem 1rem 0rem rgba(0, 0, 0, 0.2);
-      cursor: pointer;
       i {
         transform: translate(150%, 10%);
-        z-index: 5;
       }
     }
     .carousel-card-container {
@@ -55,7 +46,6 @@
       height: 80%;
       padding: 1rem;
       margin: 0 3rem;
-      // border: 1px solid pink;
       background-color: #ffffff;
       box-shadow: 0rem .5rem 1rem 0rem rgba(0, 0, 0, 0.2);
       z-index: 2;
@@ -63,23 +53,21 @@
         .displayFlex(space-between, center);
         flex-direction: column;
         display: none;
-        // border: 1px solid green;
         margin: auto;
         width: 90%;
         height: 90%;
 
         .quote-icons {
           .displayFlex(space-between, center);
-          // border: 1px solid pink;
           font-size: 4rem;
+          padding: 1rem;
           color: @lambda-dark-blue;
         }
 
         .carousel-quote {
           .font(2.2rem, 3rem);
           font-style: italic;
-          padding: 2rem 0 4rem 0;
-          // border: 1px solid pink;
+          padding: 1rem 0 3rem 0;
         }
         .divider {
           width: 40%;
@@ -89,11 +77,8 @@
         }
         .person {
           .displayFlex(center, center);
-          // width: 60%;
-          // height: 60%;
           text-align: left;
           padding: 2rem 0;
-          // border: 1px solid pink;
           img {
             margin: 0 1rem;
             width: 70px;
@@ -112,6 +97,110 @@
         }
       }
 
+    }
+  }
+}
+
+@media(max-width: 800px) {
+  .endorsements-section {
+    h1 {
+      .font(3rem, 3rem);
+    }
+    .carousel {
+      .left-button, .right-button {
+        width: 4rem;
+        height: 4rem;
+      }
+      .left-button {
+        i {
+          transform: translate(50%, 0);
+        }
+      }
+      .right-button {
+        i {
+          transform: translate(110%, 0%);
+        }
+      }
+      .carousel-card-container {
+        padding: 0rem;
+        .carousel-card {
+          .carousel-quote {
+            .font(2rem, 3rem);
+            padding: 1rem 0 2.5rem 0;
+          }
+          .person {
+            padding: 1rem 0;
+            .person-text {
+              .person-name {
+                .font(2rem, 4rem);
+                color: @lambda-red;
+              }
+              .person-title {
+                .font(1.4rem, 1.4rem);
+                color: #999999;
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@media(max-width: 500px){
+    .endorsements-section {
+    h1 {
+      .font(2.2rem, 2.4rem);
+      padding: 3rem 0 3rem 0;
+      margin: 0 1rem;
+      text-align: center;
+    }
+    .carousel {
+      .displayFlex(space-between, center);
+      flex-direction: column;
+      .left-button {
+        order: 2;
+        transform: translate(-100%, -60%);
+        width: 6rem;
+        height: 6rem;
+        i {
+          transform: translate(120%, 25%);
+        }
+      }
+      .right-button {
+        transform: translate(110%, 40%);
+        width: 6rem;
+        height: 6rem;
+        i {
+          transform: translate(200%, 25%);
+        }
+      }
+      .carousel-card-container {
+        height: 70%;
+        .carousel-card {
+          .carousel-quote {
+            .font(1.8rem, 2rem);
+          }
+          .person {
+            img {
+              width: 50px;
+            }
+            .person-text{
+              .person-name {
+                .font(1.8rem, 2rem);
+                color: @lambda-red;
+                margin-bottom: .5rem;
+              }
+              .person-title {
+                .font(1.4rem, 1.6rem);
+                color: #999999;
+              }
+            }
+          }
+        }
+
+      }
     }
   }
 }
