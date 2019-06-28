@@ -9,6 +9,7 @@
         href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap"
         rel="stylesheet"
         />
+        <script src="https://kit.fontawesome.com/8aeb8d22ed.js"></script>
         <link href="./css/index.css" rel="stylesheet" />
     </head>
 
@@ -210,17 +211,45 @@
 
             <!--ENDORSEMENTS-->
             <section class="endorsements-section">
-                <div>
-                    <h1>What people are saying about us</h1>
-                    <div class="carousel">
-                        <div class="left-button" ></div>
-                            <p class= 'carousel-quote'>This is the best website ever!</p>
-                            <p class= 'carousel-quote'>I was so far behind and Dev Desk Queue saved my life!</p>
-                            <p class= 'carousel-quote'>If it wasn't for Dev Desk I wouldnt have my job right now!</p>
-                            <p class= 'carousel-quote'>If only Lambda's Dev Desk Queue was available for all of life's problems!</p>
-                        <div class="right-button">
+                <h1>What people are saying about us</h1>
+                <div class="carousel">
+                    <div class="left-button" >
+                        <i class="fas fa-caret-left"></i>
+                    </div>
+                    <div class="carousel-card-container">
+                        <div class="carousel-card" style="display: none">
+                            <p class='carousel-quote' >This is the best website ever!</p>
+                            <div class="person">
+                                <h5 class="car-name">Joe Cool</h5>
+                                <h6 class="car-title">Web Dev Student, 2019</h6>
+                            </div>
                         </div>
-
+                        <div class="carousel-card" style="display: none">
+                            <p class='carousel-quote'>I was so far behind and Dev Desk Queue saved my life!</p>
+                            <div class="person">
+                                <h5 class="car-name">Jane Goodman</h5>
+                                <h6 class="car-title">Web Dev Student, 2019</h6>
+                            </div>
+                        </div>
+                        <div class="carousel-card" style="display: none">
+                            <p class='carousel-quote'>If it wasn't for Dev Desk I wouldnt have my job right now!</p>
+                            <div class="person">
+                                <h5 class="car-name">Ian Banks</h5>
+                                <h6 class="car-title">Web Dev Student, 2019</h6>
+                            </div>
+                        </div>
+                        <div class="carousel-card" style="display: none">
+                            <p class='carousel-quote'>If only Lambda's Dev Desk Queue was available for all of life's problems!</p>
+                            <div class="person">
+                                <h5 class="car-name">Margaret Yung</h5>
+                                <h6 class="car-title">Web Dev Student, 2019</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-button">
+                        <i class="fas fa-caret-right"></i>
+                    </div>
+                </div>
             </section>
 
             <!--CONTACT-->
@@ -261,7 +290,7 @@
             <img src="./assests/footer-assets/iconmonstr-github-5.svg" alt="" />
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenLite.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js" ></script>
     <script src="./js/Team.js"></script>
     <script src="./js/Endorsements.js"></script>
     <script src="./js/About.js"></script>

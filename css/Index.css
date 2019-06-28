@@ -799,6 +799,59 @@ img {
 .id-card:hover {
   transform: scale(1.1);
 }
+.endorsements-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 500px;
+  background-color: #eeeeee;
+}
+.endorsements-section h1 {
+  padding: 4rem;
+}
+.endorsements-section .carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid orange;
+  width: 90%;
+  height: 70%;
+}
+.endorsements-section .carousel .left-button i {
+  border: 1px solid red;
+  font-size: 10rem;
+  z-index: 5;
+  cursor: pointer;
+}
+.endorsements-section .carousel .right-button i {
+  border: 1px solid red;
+  font-size: 10rem;
+  z-index: 5;
+  cursor: pointer;
+}
+.endorsements-section .carousel .carousel-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid blue;
+}
+.endorsements-section .carousel .carousel-card-container .carousel-card {
+  display: none;
+  border: 1px solid green;
+  padding: 1rem;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .contact-content {
   display: flex;
   justify-content: space-between;
