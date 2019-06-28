@@ -705,7 +705,7 @@ img {
 }
 .tabs {
   color: black;
-  width: 90%;
+  width: 100%;
 }
 .tabs h1 {
   display: flex;
@@ -714,9 +714,8 @@ img {
 .tabs .tabWrapper {
   display: flex;
   justify-content: space-between;
-  justify-content: center;
   flex-direction: row;
-  margin: 2% 23px;
+  width: 100%;
 }
 @media (max-width: 500px) {
   .tabs .tabWrapper {
@@ -728,10 +727,11 @@ img {
   }
 }
 .tabs .tabWrapper .tab {
-  font-size: 2.23rem;
+  font-size: 2rem;
   flex-direction: row;
-  margin: 2% 23px;
+  margin: 2% 3px;
   color: black;
+  width: 100%;
   cursor: pointer;
 }
 @media (max-width: 500px) {
@@ -739,6 +739,12 @@ img {
     font-size: 2.2rem;
     display: flex;
     justify-content: center;
+  }
+}
+@media (max-width: 800px) {
+  .tabs .tabWrapper .tab {
+    font-size: 1.5rem;
+    margin-left: 0px;
   }
 }
 @media (max-width: 500px) {
