@@ -298,6 +298,7 @@ img {
 .header-container .header-right-content .header-login button {
   padding: 1rem 20%;
   border-radius: 1rem;
+  border: none;
   background-color: #bb1333;
   font-family: 'Lato', sans-serif;
   color: #444444;
