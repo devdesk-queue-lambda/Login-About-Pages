@@ -800,57 +800,130 @@ img {
   transform: scale(1.1);
 }
 .endorsements-section {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Lato', sans-serif;
+  color: #444444;
+  font-size: 1rem;
+  line-height: 1rem;
   flex-direction: column;
-  height: 500px;
+  height: 50rem;
   background-color: #eeeeee;
 }
 .endorsements-section h1 {
-  padding: 4rem;
+  padding: 4rem 0 0 0;
+  margin: 0 3rem;
 }
 .endorsements-section .carousel {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid orange;
   width: 90%;
-  height: 70%;
+  height: 90%;
+}
+.endorsements-section .carousel .left-button {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  font-size: 4rem;
+  background-color: #3ab5e5;
+  color: #f0f4f7;
+  box-shadow: 0rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 .endorsements-section .carousel .left-button i {
-  border: 1px solid red;
-  font-size: 10rem;
+  transform: translate(80%, 10%);
   z-index: 5;
+}
+.endorsements-section .carousel .right-button {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  font-size: 4rem;
+  background-color: #3ab5e5;
+  color: #f0f4f7;
+  box-shadow: 0rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 .endorsements-section .carousel .right-button i {
-  border: 1px solid red;
-  font-size: 10rem;
+  transform: translate(150%, 10%);
   z-index: 5;
-  cursor: pointer;
 }
 .endorsements-section .carousel .carousel-card-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  vertical-align: middle;
+  text-align: center;
   width: 80%;
   height: 80%;
   padding: 1rem;
-  margin: 1rem;
-  border: 1px solid blue;
+  margin: 0 3rem;
+  border: 1px solid pink;
+  background-color: #ffffff;
+  box-shadow: 0rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.2);
+  z-index: 2;
 }
 .endorsements-section .carousel .carousel-card-container .carousel-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
   display: none;
-  border: 1px solid green;
-  padding: 1rem;
-  width: 400px;
+  margin: auto;
+  width: 90%;
+  height: 90%;
+}
+.endorsements-section .carousel .carousel-card-container .carousel-card .quote-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 4rem;
+  color: #0c3c78;
+}
+.endorsements-section .carousel .carousel-card-container .carousel-card .carousel-quote {
+  font-family: 'Lato', sans-serif;
+  color: #444444;
+  font-size: 2.2rem;
+  line-height: 3rem;
+  font-style: italic;
+  padding: 2rem 0 4rem 0;
+}
+.endorsements-section .carousel .carousel-card-container .carousel-card .divider {
+  width: 40%;
+  margin: auto;
+  padding-bottom: 1rem;
+  border-top: 1px solid #55596d;
+}
+.endorsements-section .carousel .carousel-card-container .carousel-card .person {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  text-align: left;
+  padding: 2rem 0;
+}
+.endorsements-section .carousel .carousel-card-container .carousel-card .person img {
+  margin: 0 1rem;
+  width: 70px;
+}
+.endorsements-section .carousel .carousel-card-container .carousel-card .person .person-text {
+  padding: 1rem;
+}
+.endorsements-section .carousel .carousel-card-container .carousel-card .person .person-text .person-name {
+  font-family: 'Lato', sans-serif;
+  color: #444444;
+  font-size: 2.4rem;
+  line-height: 4rem;
+  color: #bb1333;
+}
+.endorsements-section .carousel .carousel-card-container .carousel-card .person .person-text .person-title {
+  font-family: 'Lato', sans-serif;
+  color: #444444;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  color: #999999;
 }
 .contact-content {
   display: flex;
