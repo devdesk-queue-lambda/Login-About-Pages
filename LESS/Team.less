@@ -1,7 +1,7 @@
 
 .tabs{
   color: black;
-  width: 90%;
+  width: 100%;
   h1{
     display: flex;
     justify-content: center;
@@ -10,9 +10,8 @@
   .tabWrapper{
     display:flex;
     justify-content: space-between;
-    justify-content: center;
     flex-direction: row;
-    margin: 2% 23px;
+    width: 100%;
 
     @media @mobile{
       display: flex;
@@ -23,15 +22,21 @@
       
     }
   .tab{
-    font-size:2.23rem; 
+    font-size:2rem; 
     flex-direction: row;
-    margin: 2% 23px;
+    margin: 2% 3px;
     color: black;
+    width: 100%;
     cursor:pointer;
     @media @mobile{
       font-size: 2.2rem;
       display:flex;
       justify-content: center;
+    }
+    @media @tablet{
+      font-size: 1.5rem;
+      margin-left: 0px;
+    
     }
     }
   }
