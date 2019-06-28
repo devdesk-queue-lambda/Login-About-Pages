@@ -721,7 +721,7 @@ img {
 }
 .team-section .tabs .tabWrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-direction: row;
   margin: 2% 0;
   width: 100%;
@@ -815,7 +815,7 @@ img {
 .id-card .img-container {
   order: -99;
   width: 100%;
-  padding: 2%;
+  padding-left: 1.5rem;
   height: auto;
 }
 .id-card .img-container img {
