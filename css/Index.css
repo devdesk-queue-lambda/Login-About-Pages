@@ -176,6 +176,7 @@ img {
   top: 0;
   max-width: 1400px;
   justify-content: center;
+  z-index: 99;
 }
 .nav-container .navbar {
   display: flex;
@@ -403,7 +404,6 @@ img {
   padding: 4rem 0;
   margin: 0rem 5rem;
   width: 20rem;
-  z-index: 99;
 }
 .about-section .about-text-content .about-inner-container {
   display: flex;
