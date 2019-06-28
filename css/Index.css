@@ -232,6 +232,9 @@ img {
     flex-direction: column;
     font-size: 10px;
   }
+  .navbar .l-logo {
+    display: none;
+  }
   .navbar .a-tags {
     display: flex;
     flex-direction: column;
@@ -719,7 +722,6 @@ img {
 .team-section .tabs .tabWrapper {
   display: flex;
   justify-content: space-between;
-  justify-content: center;
   flex-direction: row;
   margin: 2% 0;
   width: 100%;
