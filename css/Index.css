@@ -240,7 +240,7 @@ img {
     flex-direction: column;
   }
   .navbar a {
-    font-size: 3rem;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
   }
