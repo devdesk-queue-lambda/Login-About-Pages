@@ -1028,12 +1028,12 @@ img {
   width: 100%;
   border-radius: 5px;
   padding: 10px;
-  background-image: linear-gradient(to top, purple, grey);
+  background-image: linear-gradient(to top, #f0f4f7, #14121e);
 }
 .contact-content h4 {
   display: flex;
   align-items: center;
-  color: white;
+  color: #f0f4f7;
   font-size: 4.5rem;
   width: 100%;
 }
@@ -1044,6 +1044,7 @@ img {
 }
 .contact-content form {
   width: 75%;
+  color: #f0f4f7;
 }
 @media (max-width: 500px) {
   .contact-content form {
@@ -1055,21 +1056,21 @@ img {
   width: 100%;
   padding: 12px;
   margin: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #55596d;
   border-radius: 4px;
   box-sizing: border-box;
 }
 .contact-content input[type=submit] {
   width: 100%;
-  background-color: blue;
-  color: white;
+  background-color: #0c3c78;
+  color: #f0f4f7;
   padding: 20px;
   margin: 8px;
   border-radius: 4px;
   cursor: pointer;
 }
 .contact-content input[type=submit]:hover {
-  background-color: darkblue;
+  background-color: #1a61b0;
 }
 .contact-content label {
   font-size: 1.5rem;
