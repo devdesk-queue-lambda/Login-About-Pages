@@ -541,8 +541,9 @@ img {
     line-height: 1.6em;
   }
   .about-section .about-text-content h2 {
-    font-size: 2em;
     padding-left: 1rem;
+    font-size: 2em;
+    font-weight: 700;
   }
   .about-section .about-text-content .about-inner-container .helper-container {
     padding: 1rem 1.5rem;
