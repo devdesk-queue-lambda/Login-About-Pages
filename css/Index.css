@@ -624,7 +624,7 @@ img {
     text-align: center;
   }
   .about-section .about-text-content h2 {
-    font-size: 3em;
+    font-size: 2.5em;
     padding: 3rem;
     width: auto;
   }
@@ -707,122 +707,145 @@ img {
   }
 }
 .team-section {
-  background-image: linear-gradient(to bottom right, #f0f4f7, #bb1333);
+  background-color: #bb1333;
 }
 .team-section .tabs {
   color: #55596d;
   width: 100%;
   padding-top: 2rem;
+  background: #f0f4f7;
+  border-top: 2px solid #55596d;
 }
 .team-section .tabs h1 {
   color: #444444;
   display: flex;
   justify-content: center;
+  padding-bottom: 2rem;
+  margin: 1rem;
+  font-weight: 700;
 }
-.team-section .tabs .tabWrapper {
+.team-section .tabs .tab-wrapper {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: row;
-  margin: 2% 0;
+  flex-wrap: wrap;
+  margin: 0;
   width: 100%;
+  background-color: #f0f4f7;
 }
-@media (max-width: 500px) {
-  .team-section .tabs .tabWrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    margin: 1rem 0px;
-  }
-}
-.team-section .tabs .tabWrapper .tab {
+.team-section .tabs .tab-wrapper .tab {
   font-size: 1.6rem;
   flex-direction: row;
-  margin: 2% 23px;
+  padding: 0 2rem 2rem 2rem;
   text-transform: uppercase;
   cursor: pointer;
 }
-@media (max-width: 500px) {
-  .team-section .tabs .tabWrapper .tab {
-    font-size: 2.2rem;
-    display: flex;
-    justify-content: center;
-  }
+.team-section .tabs .tab-wrapper .tab:hover {
+  text-decoration-line: underline;
+  background-image: radial-gradient(#55596d);
 }
-@media (max-width: 800px) {
-  .team-section .tabs .tabWrapper .tab {
-    font-size: 1.5rem;
-    margin-left: 0;
-  }
-}
-@media (max-width: 500px) {
-  .team-section .tabs {
-    font-size: 1rem;
-    width: 100%;
-    margin: 0px;
-  }
-}
-.id-cards {
+.team-section .id-cards {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
+  padding: 2rem 0;
 }
-@media (max-width: 500px) {
-  .id-cards {
-    width: 90%;
-    margin-left: 5%;
-  }
-}
-.id-card {
+.team-section .id-cards .id-card {
+  z-index: 5;
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 5%;
-  width: 45%;
-  height: 250px;
-  background-color: #f0f4f7;
-  box-shadow: 1px 1px 4px 1px rgba(85, 89, 109, 0.5);
+  padding-top: 1.5rem;
+  margin: 2rem;
+  width: 42%;
+  min-width: 200px;
+  background-color: rgba(240, 244, 247, 0.8);
+  box-shadow: 0px 2px 15px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
 }
-.id-card .id-card-content {
-  padding: 0 4%;
-}
-.id-card h4 {
+.team-section .id-cards .id-card .id-card-content {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
-.id-card h5 {
-  font-size: 1.5rem;
+.team-section .id-cards .id-card .id-card-content .img-name-container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  margin-bottom: 0.8rem;
+  align-items: center;
+}
+.team-section .id-cards .id-card .id-card-content .img-name-container img {
+  border-radius: 50%;
+  width: 10vw;
+  max-width: 100px;
+}
+.team-section .id-cards .id-card .id-card-content .img-name-container .team-title {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+.team-section .id-cards .id-card .id-card-content .img-name-container .team-title h4 {
+  font-size: 1.8rem;
+  color: #bb1333;
+}
+.team-section .id-cards .id-card .id-card-content .img-name-container .team-title h5 {
+  color: #55596d;
+  font-size: 1.4rem;
+}
+.team-section .id-cards .id-card .id-card-content p {
+  text-align: center;
+  padding: 2rem;
   color: #55596d;
 }
-.id-card p {
-  text-align: center;
+.team-section .id-cards .id-card:hover {
+  transform: scale(1.05) translateY(-1.05rem);
+  backdrop-filter: blur(4rem);
+}
+.team-section .team-bg-polygon {
+  position: absolute;
+  top: 0%;
+  left: 15%;
+  width: 550px;
+  height: 100%;
+  transform: skew(-10deg);
+  z-index: 0;
+  background-image: linear-gradient(to bottom, #bb1333, rgba(240, 244, 247, 0.5));
 }
 @media (max-width: 800px) {
-  .id-card p {
+  .team-section .id-cards {
+    padding-top: 1rem;
+  }
+  .team-section .id-cards .id-card p {
     line-height: 2rem;
+  }
+  .team-section .team-bg-polygon {
+    display: none;
   }
 }
 @media (max-width: 500px) {
-  .id-card {
-    width: 100%;
-    justify-content: center;
+  .team-section .tabs h1 {
+    font-size: 2.5rem;
   }
-}
-.id-card .img-container {
-  order: -99;
-  width: 100%;
-  padding-left: 1.5rem;
-  height: auto;
-}
-.id-card .img-container img {
-  border-radius: 50%;
-}
-.id-card:hover {
-  transform: scale(1.1);
+  .team-section .id-cards .id-card {
+    width: 100%;
+    padding-top: 0;
+    margin: 1.5rem;
+  }
+  .team-section .id-cards .id-card .id-card-content .img-name-container {
+    align-items: center;
+  }
+  .team-section .id-cards .id-card .id-card-content .img-name-container img {
+    width: 15vw;
+  }
+  .team-section .id-cards .id-card .id-card-content p {
+    padding: 1rem;
+  }
+  .team-section .team-bg-polygon {
+    display: none;
+  }
 }
 .endorsements-section {
   display: flex;
@@ -1015,6 +1038,9 @@ img {
   .endorsements-section .carousel .left-button i {
     transform: translate(120%, 25%);
   }
+  .endorsements-section .carousel .left-button:active {
+    transform: translate(-100%, -50%);
+  }
   .endorsements-section .carousel .right-button {
     transform: translate(110%, 40%);
     width: 6rem;
@@ -1022,6 +1048,9 @@ img {
   }
   .endorsements-section .carousel .right-button i {
     transform: translate(200%, 25%);
+  }
+  .endorsements-section .carousel .right-button:active {
+    transform: translate(110%, 50%);
   }
   .endorsements-section .carousel .carousel-card-container {
     height: 70%;
@@ -1031,6 +1060,9 @@ img {
     color: #444444;
     font-size: 1.8rem;
     line-height: 2rem;
+  }
+  .endorsements-section .carousel .carousel-card-container .carousel-card .person {
+    padding: 0;
   }
   .endorsements-section .carousel .carousel-card-container .carousel-card .person img {
     width: 50px;
