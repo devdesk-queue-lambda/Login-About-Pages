@@ -1,20 +1,18 @@
 .team-section {
   background-color: @lambda-red;
+  position: relative;
 
   .tabs {
-    color: @lambda-grey;
-    width: 100%;
     padding-top: 2rem;
-    background: @lambda-light-grey;
-    border-top: 2px solid @lambda-grey;
+    width: 100%;
+    color: @lambda-light-grey;
 
-    h1 {
-      color: #444444;
+    .team-title {
       display: flex;
       justify-content: center;
       padding-bottom: 2rem;
-      margin: 1rem;
-      font-weight: 700;
+      margin: 1.2rem;
+      z-index: 9;
     }
 
     .tab-wrapper {
@@ -24,9 +22,9 @@
       flex-wrap: wrap;
       margin: 0;
       width: 100%;
-      background-color: @lambda-light-grey;
 
       .tab {
+        z-index: 2;
         font-size: 1.6rem;
         flex-direction: row;
         padding: 0 2rem 2rem 2rem;
@@ -35,7 +33,6 @@
       }
       .tab:hover {
         text-decoration-line: underline;
-        background-image: radial-gradient(@lambda-grey);
       }
     }
   }
@@ -45,11 +42,10 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    position: relative;
     padding: 2rem 0;
 
     .id-card {
-      z-index: 5;
+      z-index: 3;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -72,11 +68,16 @@
           flex-direction: row;
           justify-content: center;
           align-items: center;
+          transition: transform .3s;
 
           img {
             border-radius: 50%;
             width: 10vw;
             max-width: 100px;
+            filter: grayscale(70%)
+          }
+          img:hover {
+            filter: grayscale(0%);
           }
           .team-title {
             display: flex;
@@ -101,7 +102,7 @@
       }
     }
     .id-card:hover {
-      transform: scale(1.05) translateY(-1.05rem);
+      transform: scale(1.02) translateY(-1.01rem);
       backdrop-filter: blur(4rem);
     }
   }
@@ -109,13 +110,13 @@
   .team-bg-polygon {
     position: absolute;
     top: 0%;
-    left: 15%;
-    width: 550px;
+    left: 13%;
+    width: 540px;
     height: 100%;
     transform: skew(-10deg);
     z-index: 0;
     background-image: linear-gradient(to bottom,
-      @lambda-red, rgb(@lambda-light-grey, .5));
+      transparent, rgb(@lambda-light-grey, .5));
   }
 }
 
@@ -135,7 +136,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media @mobile {
   .team-section {
     .tabs {
       h1 {

@@ -2,78 +2,68 @@
   position: sticky;
   top: 0;
   max-width: 1400px;
-  justify-content: center;
   z-index: 99;
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    background-color: @lambda-light-blue;
-    align-items: center;
-    padding: 22px;
-  }
 
-  img {
-    height: 10%;
-    width: 15%;
-    @media @mobile {
-      width: 100%;
+  .navbar {
+    .displayFlex(space-between, center);
+    background-color: @lambda-light-blue;
+    padding: 1rem;
+
+    .l-logo {
+      padding-left: 1rem;
+      height: 10%;
+      width: 15%;
+      min-width: 10rem;
+    }
+    .a-tags {
+      .displayFlex(space-evenly, center);
+      width: 70%;
+      a {
+        padding: 2%;
+        text-decoration: none;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        color: white;
+      }
+      a:hover {
+        color: @lambda-red;
+        cursor: pointer;
+      }
     }
   }
-
-  a {
-    padding: 6.5px;
-    text-decoration: none;
-    font-size: 1.8rem;
-    color: white;
-  }
-  a:hover {
-    color: @lambda-red;
-    cursor: pointer;
-  }
-}
-.a-tags {
-  display: flex;
-  justify-content: space-evenly;
-  width: 60%;
 }
 
 @media @tablet {
-  .navbar {
-    display: flex;
-    margin: 0 auto;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px;
-
-    .lambda-logo {
-      height: 28px;
-    }
-    a {
-      font-size: 1.3rem;
+  .nav-container {
+    .navbar {
+      flex-direction: column;
+      .l-logo {
+        padding-left: 0rem;
+      }
+      .a-tags {
+        width: 85%;
+        a {
+          font-size: 1.3rem;
+        }
+      }
     }
   }
 }
 
 @media @mobile {
-  .navbar {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    font-size: 10px;
-
-    .l-logo {
-      display: none;
-    }
-
-    .a-tags {
-      display: flex;
-      flex-direction: column;
-    }
-    a {
-      font-size: 2rem;
-      display: flex;
+  .nav-container {
+    .navbar {
       justify-content: center;
+      flex-direction: row;
+      padding: .5rem 0;
+      .l-logo {
+        min-width: 7rem;
+      }
+      .a-tags {
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+      }
     }
   }
 }
