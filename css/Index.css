@@ -174,15 +174,18 @@ img {
 .nav-container {
   position: sticky;
   top: 0;
-  max-width: 1400px;
   z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #14121e;
 }
 .nav-container .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #3ab5e5;
   padding: 1rem;
+  width: 1000px;
 }
 .nav-container .navbar .l-logo {
   padding-left: 1rem;
