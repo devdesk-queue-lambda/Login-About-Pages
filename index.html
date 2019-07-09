@@ -298,19 +298,15 @@
             <h4>Questions?<br>Comments?<br>Get in touch!</h4>
             <div class="contact-form">
                 <form name="contact" method="POST" data-netlify="true" netlify>
-                    <label for="name" class='name-label'>
-                        NAME
-                    </label>
+                    <label for="name">NAME</label>
                     <input type='text' name="name" class="name-input" placeholder='name'>
-                    <label for="email" class="email-input" >
-                        EMAIL
-                    </label>
+                    <label for="email">EMAIL</label>
                     <input type="email" name='email' class="email-input" placeholder="example@email.com" />
-                    <label for="comment" class="comment-input" >
-                        COMMENT
-                    </label>
+                    <label for="comment">COMMENT</label>
                     <textarea name='comment' class="comment-textarea" placeholder="your comment here"></textarea>
-
+                    <br>
+                    <div data-netlify-recaptcha="true" class="recaptcha" data-netlify-recaptcha></div>
+                    <br>
                     <button type='submit'>SUBMIT</button>
                 </form>
             </div>
